@@ -1,22 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import { FiShoppingCart, FiMenu, FiX} from 'react-icons/fi';
+import { FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
 import { FaFish } from 'react-icons/fa';
 import './styles/main.css';
 import AboutSection from './components/AboutSection';
 import HeroSection from './components/HeroSection';
-import ProjectsSection from './components/ProjectsSection';
+import ServicesSection from './components/ServicesSection';
+
+const ScrollIndicator = () => {
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percentage = (scrollTop / scrollHeight) * 100;
+      setScrollPercentage(percentage);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="fixed top-0 left-0 w-full h-1 bg-green-200 z-50">
+      <div 
+        className="h-full bg-green-600 transition-all duration-150 ease-out"
+        style={{ width: `${scrollPercentage}%` }}
+      />
+    </div>
+  );
+};
 
 export default function App() {
-  const [projects, setProjects] = useState([]);
   const [products, setProducts] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    fetch('/api/projects')
-      .then(response => response.json())
-      .then(data => setProjects(data));
-
     fetch('/api/products')
       .then(response => response.json())
       .then(data => setProducts(data));
@@ -43,6 +63,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <ScrollIndicator />
       <header className="header">
         <div className="container">
           <div className="header-content">
@@ -54,7 +75,7 @@ export default function App() {
             </a>
             <nav className="nav desktop-nav">
               <ul className="nav-list">
-                {['home', 'about', 'projects', 'products', 'contact'].map((section) => (
+                {['home', 'about', 'services', 'products', 'contact'].map((section) => (
                   <li key={section}>
                     <a 
                       href={`#${section}`} 
@@ -88,7 +109,7 @@ export default function App() {
             <FiX className="h-6 w-6" />
           </button>
           <ul>
-            {['home', 'about', 'projects', 'products', 'contact'].map((section) => (
+            {['home', 'about', 'services', 'products', 'contact'].map((section) => (
               <li key={section}>
                 <a 
                   href={`#${section}`} 
@@ -106,7 +127,7 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
-        <ProjectsSection projects={projects} />
+        <ServicesSection />
         <section id="products" className="min-h-screen flex items-center py-16">
           <div className="container mx-auto px-4">
             <h2 className="section-title">Our Products</h2>
@@ -163,7 +184,7 @@ export default function App() {
               <ul className="footer-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#products">Shop</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
