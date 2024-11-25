@@ -9,7 +9,7 @@ const HeroSection = () => {
         <h1 className="hero-title">Discover the Art of Landscaping</h1>
         <p className="hero-subtitle">Transform your space with stunning aquascapes</p>
         <div className="hero-cta">
-          <a href="#projects" className="btn btn-primary">Explore Our Projects</a>
+          <a href="#services" className="btn btn-primary">Explore Our Projects</a>
           <a href="#contact" className="btn btn-secondary">Get Started</a>
         </div>
       </div>

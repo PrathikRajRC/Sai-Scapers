@@ -108,7 +108,7 @@ export default function ServicesSection() {
   const [selectedService, setSelectedService] = useState(null);
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-green-50 to-white">
+    <section id="services" className="py-24 bg-gradient-to-b from-green-200 to-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-green-800">
           Discover the World of Living Landscapes

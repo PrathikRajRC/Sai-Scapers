@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 import { FaFish } from 'react-icons/fa';
 import './styles/main.css';
-import AboutSection from './components/AboutSection';
 import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
+import ProductsSection from './components/ProductsSection';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 
 const ScrollIndicator = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -32,15 +35,8 @@ const ScrollIndicator = () => {
 };
 
 export default function App() {
-  const [products, setProducts] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    fetch('/api/products')
-      .then(response => response.json())
-      .then(data => setProducts(data));
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -64,32 +60,28 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ScrollIndicator />
-      <header className="header">
-        <div className="container">
-          <div className="header-content">
-            <a href="#home" className="logo">
-              <div className="logo-icon">
+      <header className="header fixed top-0 left-0 right-0 bg-white bg-opacity-90 shadow-md z-40">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center py-4">
+            <a href="#home" className="flex items-center space-x-2">
+              <div className="bg-green-600 rounded-full p-2">
                 <FaFish className="h-6 w-6 text-white" />
               </div>
-              <span className="logo-text">7t Scapers</span>
+              <span className="text-xl font-bold text-green-800">7t Scapers</span>
             </a>
-            <nav className="nav desktop-nav">
-              <ul className="nav-list">
-                {['home', 'about', 'services', 'products', 'contact'].map((section) => (
-                  <li key={section}>
-                    <a 
-                      href={`#${section}`} 
-                      className={`nav-link ${activeSection === section ? 'active' : ''}`}
-                    >
-                      {section.charAt(0).toUpperCase() + section.slice(1)}
-                      <span className="nav-link-indicator"></span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <nav className="hidden md:flex space-x-6">
+              {['home', 'about', 'services', 'products', 'contact'].map((section) => (
+                <a 
+                  key={section}
+                  href={`#${section}`} 
+                  className={`text-gray-600 hover:text-green-600 transition-colors duration-300 ${activeSection === section ? 'text-green-600' : ''}`}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              ))}
             </nav>
             <button
-              className="mobile-menu-toggle"
+              className="md:hidden text-gray-600 hover:text-green-600 transition-colors duration-300"
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
             >
@@ -99,110 +91,29 @@ export default function App() {
         </div>
       </header>
 
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <nav>
-          <button 
-            onClick={toggleMobileMenu}
-            className="mobile-menu-back"
-            aria-label="Close menu"
-          >
-            <FiX className="h-6 w-6" />
-          </button>
-          <ul>
-            {['home', 'about', 'services', 'products', 'contact'].map((section) => (
-              <li key={section}>
-                <a 
-                  href={`#${section}`} 
-                  onClick={toggleMobileMenu}
-                  className={activeSection === section ? 'active' : ''}
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      <div className={`fixed inset-0 bg-green-800 bg-opacity-90 z-50 transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <div className="flex flex-col items-center justify-center h-full">
+          {['home', 'about', 'services', 'products', 'contact'].map((section) => (
+            <a 
+              key={section}
+              href={`#${section}`} 
+              className="text-white text-2xl mb-6 hover:text-green-300 transition-colors duration-300"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
+        </div>
       </div>
 
-      <main>
+      <main className="pt-16">
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <section id="products" className="min-h-screen flex items-center py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="section-title">Our Products</h2>
-            <div className="products-grid">
-              {products.map((product, index) => (
-                <div key={index} className="product-card">
-                  <img src={product.image} alt={product.name} className="product-image" />
-                  <div className="product-info">
-                    <h3 className="product-title">{product.name}</h3>
-                    <p className="product-description">{product.description}</p>
-                    <p className="product-price">${product.price.toFixed(2)}</p>
-                  </div>
-                  <button className="add-to-cart-btn">
-                    <FiShoppingCart className="mr-2" />
-                    Add to Cart
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="min-h-screen flex items-center py-16 bg-muted">
-          <div className="container mx-auto px-4">
-            <h2 className="section-title">Contact Us</h2>
-            <form className="contact-form">
-              <div className="form-group">
-                <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" id="name" name="name" className="form-input" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email" className="form-label">Email</label>
-                <input type="email" id="email" name="email" className="form-input" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">Message</label>
-                <textarea id="message" name="message" rows="4" className="form-input" required></textarea>
-              </div>
-              <button type="submit" className="submit-btn">Send Message</button>
-            </form>
-          </div>
-        </section>
+        <ProductsSection />
+        <ContactSection />
       </main>
-
-      <footer className="bg-primary text-primary-foreground py-8">
-        <div className="container mx-auto px-4">
-          <div className="footer-content">
-            <div className="footer-section">
-              <h3 className="footer-title">7t Scapers</h3>
-              <p>Bringing nature's beauty underwater</p>
-            </div>
-            <div className="footer-section">
-              <h3 className="footer-title">Quick Links</h3>
-              <ul className="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#products">Shop</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h3 className="footer-title">Connect With Us</h3>
-              <div className="social-links">
-                <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
-                <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
-                <a href="https://twitter.com" aria-label="Twitter">Twitter</a>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} 7t Scapers. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
