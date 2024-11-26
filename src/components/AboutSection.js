@@ -3,13 +3,13 @@ import { ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center py-16 bg-gradient-to-b from-green-200 to-white">
+    <section id="about" className="min-h-screen flex items-center py-16 bg-gradient-to-b from-green-50 to-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
           <div className="w-full lg:w-1/2 order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-green-800">Where Nature Meets Art</h2>
             <div className="prose max-w-none text-gray-700">
-              <blockquote className="text-xl italic text-green-700 mb-6 border-l-4 border-green-500 pl-4 py-2 bg-green-100 rounded-r-lg">
+              <blockquote className="text-xl italic text-green-700 mb-6 border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
                 "We don't just design; we care, creating a seamless and rewarding experience from start to finish."
               </blockquote>
               <p className="mb-4 text-lg">
@@ -31,17 +31,16 @@ const AboutSection = () => {
           </div>
           
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
-            <div className="relative w-full max-w-md mx-auto lg:ml-auto rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/Team-pana.png"
-                alt="Team collaboration illustration"
-                className="w-full h-auto object-cover"
-                style={{ backgroundColor: 'transparent' }}
-                onError={(e) => {
-                  console.error("Error loading image:", e);
-                  e.target.src = "https://i.pinimg.com/736x/ba/7b/ab/ba7babda9d8a19a7186052fc5f051e14.jpg";
-                }}
-              />
+          <div className="relative w-full max-w-4xl mx-auto lg:ml-auto rounded-3xl overflow-hidden shadow-2xl aspect-video">
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full" 
+                src="https://www.youtube-nocookie.com/embed/pQ9__bgJLCo?si=6xOjOiuaGxGgdXBl&rel=0&autoplay=1&mute=1&loop=1&playlist=pQ9__bgJLCo" 
+                title="YouTube video player" 
+                frameBorder="2" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
