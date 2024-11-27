@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { FaFish } from 'react-icons/fa';
 import './styles/main.css';
@@ -9,10 +9,27 @@ import ProductsSection from './components/ProductsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
+// Modal component to display the product details
+const ProductModal = ({ isOpen, product, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white p-6 rounded-lg max-w-lg w-full">
+        <button onClick={onClose} className="absolute top-2 right-2 text-gray-600">X</button>
+        <h2 className="text-xl font-bold mb-4">{product.title}</h2>
+        <img src={product.image} alt={product.title} className="w-full h-64 object-cover mb-4" />
+        <p className="text-lg mb-4">{product.description}</p>
+        <p className="text-xl font-bold">${product.price}</p>
+      </div>
+    </div>
+  );
+};
+
 const ScrollIndicator = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -37,8 +54,29 @@ const ScrollIndicator = () => {
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  useEffect(() => {
+  // Example products
+  const products = [
+    { title: 'Starter Package', description: 'Perfect for beginners. Includes basic equipment and plants to get you started on your aquascaping journey.', price: '99.99', image: 'https://via.placeholder.com/250' },
+    { title: 'Advanced Setup', description: 'For enthusiasts looking to create more complex aquascapes. Includes premium equipment and a wider variety of plants.', price: '249.99', image: 'https://via.placeholder.com/250' },
+    { title: 'Professional Kit', description: 'Our top-tier offering for serious aquascapers. Includes high-end equipment, rare plants, and personalized design consultation.', price: '499.99', image: 'https://via.placeholder.com/250' },
+  ];
+
+  // Handle opening the modal
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  // Handle closing the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
+  React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -110,9 +148,17 @@ export default function App() {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <ProductsSection />
+        <ProductsSection products={products} onProductClick={handleProductClick} />
         <ContactSection />
       </main>
+
+      {/* Product Modal */}
+      <ProductModal 
+        isOpen={isModalOpen} 
+        product={selectedProduct} 
+        onClose={closeModal} 
+      />
+      
       <Footer />
     </div>
   );

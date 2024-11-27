@@ -13,7 +13,7 @@ const HeroSection = () => {
           <a href="#contact" className="btn btn-secondary">Get Started</a>
         </div>
       </div>
-      <div className="hero-image over">
+      <div className="hero-image">
         <img src="https://sinkoraquarium.com/wp-content/uploads/2018/04/test.jpg" alt="Beautiful aquascape" />
       </div>
       <a href="#about" className="scroll-indicator">
