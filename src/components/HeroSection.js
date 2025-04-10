@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">Discover the Art of Landscaping</h1>
+        <h1 className="hero-title">Discover the Art of Live Scaping</h1>
         <p className="hero-subtitle">Transform your space with stunning aquascapes</p>
         <div className="hero-cta">
           <a href="#services" className="btn btn-primary">Explore Our Projects</a>

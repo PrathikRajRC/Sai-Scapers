@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Home, Info, Settings, Package, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FaFish } from 'react-icons/fa';
 
@@ -52,13 +52,51 @@ const Navigation = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map(({ to, label }) => (
-              <NavLink key={to} to={to}>
-                {label}
-              </NavLink>
-            ))}
+        <div className="mobile-menu-overlay">
+          <div className="mobile-menu-content">
+            <div className="mobile-menu-header">
+              <div className="mobile-logo">
+                <div className="logo-icon">
+                  <FaFish className="text-white" />
+                </div>          
+                <span className="logo-text">Sai Scapers</span>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="mobile-menu-close"
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <div className="mobile-menu-links">
+              {navLinks.map(({ to, label }) => (
+                <NavLink 
+                  key={to} 
+                  to={to} 
+                  onClick={() => setIsOpen(false)}
+                  className="mobile-menu-link"
+                >
+                  {label}
+                </NavLink>
+              ))}
+            </div>
+
+            <div className="mobile-menu-footer">
+              <div className="mobile-social-links">
+                <a href="#" className="social-link">
+                  <Facebook size={20} />
+                </a>
+                <a href="#" className="social-link">
+                  <Instagram size={20} />
+                </a>
+                <a href="#" className="social-link">
+                  <Twitter size={20} />
+                </a>
+              </div>
+              <p className="mobile-copyright">© 2024 Sai Scapers</p>
+            </div>
           </div>
         </div>
       )}

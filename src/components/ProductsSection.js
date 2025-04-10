@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5'; // Correct close icon import from react-icons/io5
+import { FaBox, FaTools, FaCrown, FaLeaf, FaWater } from 'react-icons/fa';
 
 // Modal component to display the product details
 const ProductModal = ({ product, onClose }) => {
@@ -46,13 +47,22 @@ const ProductModal = ({ product, onClose }) => {
 // Product Card for displaying product info
 const ProductCard = ({ id, title, description, price, image, icon, features, onClick }) => (
   <div className="product-card">
-    <img src={image} alt={title} className="product-image" />
-    <div className="product-info">
+    <div className="product-image-placeholder">
+      <FaWater className="text-green-200" size={60} />
+      <div className="product-icon-placeholder">
+        {id === 1 && <FaBox />}
+        {id === 2 && <FaTools />}
+        {id === 3 && <FaCrown />}
+      </div>
+    </div>
+    <div className="product-content">
       <h3 className="product-title">{title}</h3>
       <p className="product-description">{description}</p>
       <p className="product-price">${price}</p>
-      {/* Trigger the modal with product data */}
-      <button onClick={() => onClick({ id, title, description, price, image, icon, features })} className="btn btn-primary">
+      <button 
+        onClick={() => onClick({ id, title, description, price, image, icon, features })} 
+        className="btn btn-primary w-full"
+      >
         Explore More
       </button>
     </div>
