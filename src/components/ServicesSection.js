@@ -115,7 +115,7 @@ export default function ServicesSection() {
         </h2>
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            At 7t Scapers, we specialize in creating and maintaining breathtaking living environments tailored to your vision. Our services go beyond design—we provide regular maintenance to give you a completely hassle-free experience.
+            At Sai Scapers, we specialize in creating and maintaining breathtaking living environments tailored to your vision. Our services go beyond design—we provide regular maintenance to give you a completely hassle-free experience.
           </p>
           <p className="text-2xl text-green-700 font-semibold">
             Your only job? Relax and enjoy the beauty we bring to your space.

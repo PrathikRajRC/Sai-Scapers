@@ -105,7 +105,7 @@ export default function App() {
               <div className="bg-green-600 rounded-full p-2">
                 <FaFish className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-green-800">7t Scapers</span>
+              <span className="text-xl font-bold text-green-800">Sai Scapers</span>
             </a>
             <nav className="hidden md:flex space-x-6">
               {['home', 'about', 'services', 'products', 'contact'].map((section) => (

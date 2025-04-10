@@ -13,7 +13,7 @@ const AboutSection = () => {
                 "We don't just design; we care, creating a seamless and rewarding experience from start to finish."
               </blockquote>
               <p className="mb-4 text-lg">
-                At 7t Scapers, we believe that Nature is one of God's greatest gifts, and our mission is to bring that gift into your everyday life. Founded by Harshith S, our passion lies in crafting stunning aquascapes, terrariums, and living ecosystems that transform ordinary spaces into extraordinary sanctuaries.
+                At Sai Scapers, we believe that Nature is one of God's greatest gifts, and our mission is to bring that gift into your everyday life. Founded by Harshith S, our passion lies in crafting stunning aquascapes, terrariums, and living ecosystems that transform ordinary spaces into extraordinary sanctuaries.
               </p>
               <p className="mb-6 text-lg">
                 We provide regular maintenance services to ensure your creations stay vibrant and thriving. Our hassle-free approach lets you enjoy the tranquility and elegance of your living landscapes without any stress.

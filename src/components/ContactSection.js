@@ -41,7 +41,7 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <p className="flex items-center text-gray-600">
                   <FiMail className="mr-3 text-emerald-600" />
-                  <a href="mailto:info@7tscapers.com" className="hover:text-emerald-600 transition-colors duration-300">info@7tscapers.com</a>
+                  <a href="mailto:info@saiscapers.com" className="hover:text-emerald-600 transition-colors duration-300">info@saiscapers.com</a>
                 </p>
                 <p className="flex items-center text-gray-600">
                   <FiPhone className="mr-3 text-emerald-600" />
