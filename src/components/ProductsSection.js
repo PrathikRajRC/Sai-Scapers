@@ -45,7 +45,7 @@ const ProductModal = ({ product, onClose }) => {
 };
 
 // Product Card for displaying product info
-const ProductCard = ({ id, title, description, price, image, icon, features, onClick }) => (
+const ProductCard = ({ id, title, description, price, image, features, onClick }) => (
   <div className="product-card">
     <div className="product-image-placeholder">
       <img src={image} alt={title} />
@@ -60,7 +60,7 @@ const ProductCard = ({ id, title, description, price, image, icon, features, onC
       <p className="product-description">{description}</p>
       <p className="product-price">${price}</p>
       <button 
-        onClick={() => onClick({ id, title, description, price, image, icon, features })} 
+        onClick={() => onClick({ id, title, description, price, image, features })} 
         className="btn btn-primary w-full"
       >
         Explore More
