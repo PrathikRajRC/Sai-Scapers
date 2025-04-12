@@ -69,7 +69,7 @@ export default function App() {
     setSelectedProduct(product);
     setIsModalOpen(true);
   };
-
+  // Handle closing the modal
   // Handle closing the modal
   const closeModal = () => {
     setIsModalOpen(false);
