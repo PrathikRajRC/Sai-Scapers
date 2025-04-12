@@ -17,20 +17,22 @@ const ProductModal = ({ product, onClose }) => {
 
         {/* Product Title and Icon */}
 
-        <h2 >{product.title}</h2>
+        <h2 className="text-2xl font-bold mb-4">{product.title}</h2>
 
         {/* Product Image */}
         <img src={product.image} alt={product.title} className="product-modal-image" />
 
         {/* Product Description */}
-        <p>{product.description}</p>
+        <p className="text-gray-700 mb-6">{product.description}</p>
 
         {/* Key Features */}
-        <h4 className="text-xl font-semibold text-center">Key Features</h4>
-        <ul className="features">
+        <h4 className="text-xl font-semibold mb-4 text-center">✨ Key Features</h4>
+        <ul className="features space-y-2">
           {product.features && product.features.length > 0 ? (
             product.features.map((feature, index) => (
-              <li key={index}>{feature}</li>
+              <li key={index} className="flex items-center gap-2">
+                {feature}
+              </li>
             ))
           ) : (
             <li>No features available</li> // Fallback if no features exist
@@ -38,7 +40,7 @@ const ProductModal = ({ product, onClose }) => {
         </ul>
 
         {/* Product Price */}
-        <p className="price">${product.price}</p>
+        <p className="price text-2xl font-bold mt-6">₹{product.price}</p>
       </div>
     </div>
   );
@@ -58,7 +60,7 @@ const ProductCard = ({ id, title, description, price, image, features, onClick }
     <div className="product-content">
       <h3 className="product-title">{title}</h3>
       <p className="product-description">{description}</p>
-      <p className="product-price">${price}</p>
+      <p className="product-price">₹{price}</p>
       <button 
         onClick={() => onClick({ id, title, description, price, image, features })} 
         className="btn btn-primary w-full"
@@ -76,30 +78,45 @@ const ProductsSection = () => {
   const products = [
     {
       id: 1,
-      title: 'Starter Package',
-      description: 'Perfect for beginners. Includes basic equipment and plants to get you started on your aquascaping journey.',
-      price: '90',
-      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png', // Placeholder image
-      icon: 'https://via.placeholder.com/60', // Example icon image URL
-      features: ['Beginner-friendly', 'Affordable', 'Easy to set up'],
+      title: '🌱 Starter Package',
+      description: 'Perfect for beginners who want to start their aquascaping journey. Includes essential equipment and beginner-friendly plants to create your first underwater masterpiece.',
+      price: '999',
+      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png',
+      features: [
+        '🎯 Beginner-friendly setup',
+        '💰 Budget-friendly investment',
+        '⚡ Quick and easy installation',
+        '🌿 Basic plant collection',
+        '📚 Starter guide included'
+      ],
     },
     {
       id: 2,
-      title: 'Advanced Setup',
-      description: 'For enthusiasts looking to create more complex aquascapes. Includes premium equipment and a wider variety of plants.',
-      price: '250',
-      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png', // Placeholder image
-      icon: 'https://via.placeholder.com/60', // Example icon image URL
-      features: ['High-quality equipment', 'Diverse plant collection', 'Suitable for complex designs'],
+      title: '✨ Advanced Setup',
+      description: 'For enthusiasts ready to take their aquascaping to the next level. Includes premium equipment and a diverse selection of plants to create stunning underwater landscapes.',
+      price: '2999',
+      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png',
+      features: [
+        '💎 High-quality equipment',
+        '🌺 Diverse plant collection',
+        '🎨 Complex design capabilities',
+        '🔧 Advanced maintenance tools',
+        '📖 Expert guide included'
+      ],
     },
     {
       id: 3,
-      title: 'Professional Kit',
-      description: 'Our top-tier offering for serious aquascaper. Includes high-end equipment, rare plants, and personalized design consultation.',
-      price: '500',
-      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png', // Placeholder image
-      icon: 'https://via.placeholder.com/60', // Example icon image URL
-      features: ['Top-tier equipment', 'Rare plant collection', 'Personalized consultation'],
+      title: '👑 Professional Kit',
+      description: 'Our premium offering for serious aquascapers. Includes top-tier equipment, rare plants, and personalized design consultation to create your dream underwater world.',
+      price: '5999',
+      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png',
+      features: [
+        '💎 Premium equipment',
+        '🌿 Rare plant collection',
+        '👨‍🎨 Personalized consultation',
+        '⚙️ Professional maintenance tools',
+        '📚 Comprehensive guide included'
+      ],
     },
     // {
     //   id: 4,

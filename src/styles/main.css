@@ -407,7 +407,6 @@ html {
   padding: 2rem;
   border-radius: 1rem;
   max-width: 500px;
-  /* max-height: 500px; */
   width: 50%;
   position: relative;
   justify-content: center;
@@ -464,7 +463,10 @@ html {
 
 @media (max-width: 768px) {
   .product-modal-content {
+    width: 90%;
     max-width: 90%;
+    padding: 1.5rem;
+    margin: 1rem;
   }
 }
 
