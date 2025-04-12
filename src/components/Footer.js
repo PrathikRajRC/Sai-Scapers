@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Sai Scapers</h3>
+            <h3 className="text-2xl font-bold mb-4">Sai Scaper</h3>
             <p className="mb-4">Bringing nature's beauty to your space</p>
             <div className="flex space-x-4">
               <a
@@ -103,11 +103,11 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <p className="mb-2">123 Nature Street, Green City, 12345</p>
             <p className="mb-2">Phone: (123) 456-7890</p>
-            <p className="mb-2">Email: info@saiscapers.com</p>
+            <p className="mb-2">Email: info@saiscaper.com</p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-green-700 text-center">
-          <p>&copy; {currentYear} Sai Scapers. All rights reserved.</p>
+          <p>&copy; {currentYear} Sai Scaper. All rights reserved.</p>
         </div>
       </div>
     </footer>

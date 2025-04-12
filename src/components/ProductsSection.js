@@ -79,7 +79,7 @@ const ProductsSection = () => {
       title: 'Starter Package',
       description: 'Perfect for beginners. Includes basic equipment and plants to get you started on your aquascaping journey.',
       price: '99.99',
-      image: 'https://via.placeholder.com/250', // Placeholder image
+      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png', // Placeholder image
       icon: 'https://via.placeholder.com/60', // Example icon image URL
       features: ['Beginner-friendly', 'Affordable', 'Easy to set up'],
     },
@@ -95,7 +95,7 @@ const ProductsSection = () => {
     {
       id: 3,
       title: 'Professional Kit',
-      description: 'Our top-tier offering for serious aquascapers. Includes high-end equipment, rare plants, and personalized design consultation.',
+      description: 'Our top-tier offering for serious aquascaper. Includes high-end equipment, rare plants, and personalized design consultation.',
       price: '499.99',
       image: 'https://via.placeholder.com/250', // Placeholder image
       icon: 'https://via.placeholder.com/60', // Example icon image URL
@@ -104,7 +104,7 @@ const ProductsSection = () => {
     // {
     //   id: 4,
     //   title: 'Professional Kit',
-    //   description: 'Our top-tier offering for serious aquascapers. Includes high-end equipment, rare plants, and personalized design consultation.',
+    //   description: 'Our top-tier offering for serious aquascaper. Includes high-end equipment, rare plants, and personalized design consultation.',
     //   price: '499.99',
     //   image: 'https://via.placeholder.com/250', // Placeholder image
     //   icon: 'https://via.placeholder.com/60', // Example icon image URL

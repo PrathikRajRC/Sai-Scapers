@@ -31,7 +31,7 @@ const Navigation = () => {
             <div className="logo-icon transition-transform duration-300 ease-in-out">
                 <FaFish className="text-white" />
             </div>          
-            <span className="logo-text text-xl font-bold text-green-800">Sai Scapers</span>
+            <span className="logo-text text-xl font-bold text-green-800">Sai Scaper</span>
           </div>
           <div className="hidden md:flex space-x-6">
             {navLinks.map(({ to, label }) => (
@@ -59,7 +59,7 @@ const Navigation = () => {
                 <div className="logo-icon">
                   <FaFish className="text-white" />
                 </div>          
-                <span className="logo-text">Sai Scapers</span>
+                <span className="logo-text">Sai Scaper</span>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
@@ -95,7 +95,7 @@ const Navigation = () => {
                   <Twitter size={20} />
                 </a>
               </div>
-              <p className="mobile-copyright">© 2024 Sai Scapers</p>
+              <p className="mobile-copyright">© 2024 Sai Scaper</p>
             </div>
           </div>
         </div>

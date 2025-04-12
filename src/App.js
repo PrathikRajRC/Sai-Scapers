@@ -61,7 +61,7 @@ export default function App() {
   const products = [
     { title: 'Starter Package', description: 'Perfect for beginners. Includes basic equipment and plants to get you started on your aquascaping journey.', price: '99.99', image: 'https://via.placeholder.com/250' },
     { title: 'Advanced Setup', description: 'For enthusiasts looking to create more complex aquascapes. Includes premium equipment and a wider variety of plants.', price: '249.99', image: 'https://via.placeholder.com/250' },
-    { title: 'Professional Kit', description: 'Our top-tier offering for serious aquascapers. Includes high-end equipment, rare plants, and personalized design consultation.', price: '499.99', image: 'https://via.placeholder.com/250' },
+    { title: 'Professional Kit', description: 'Our top-tier offering for serious aquascaper. Includes high-end equipment, rare plants, and personalized design consultation.', price: '499.99', image: 'https://via.placeholder.com/250' },
   ];
 
   // Handle opening the modal
@@ -105,7 +105,7 @@ export default function App() {
               <div className="bg-green-600 rounded-full p-2">
                 <FaFish className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-green-800">Sai Scapers</span>
+              <span className="text-xl font-bold text-green-800">Sai Scaper</span>
             </a>
             <nav className="hidden md:flex space-x-6">
               {['home', 'about', 'services', 'products', 'contact'].map((section) => (
