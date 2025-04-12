@@ -48,7 +48,7 @@ const ProductModal = ({ product, onClose }) => {
 const ProductCard = ({ id, title, description, price, image, icon, features, onClick }) => (
   <div className="product-card">
     <div className="product-image-placeholder">
-      <FaWater className="text-green-200" size={60} />
+      <img src={image} alt={title} />
       <div className="product-icon-placeholder">
         {id === 1 && <FaBox />}
         {id === 2 && <FaTools />}
@@ -78,7 +78,7 @@ const ProductsSection = () => {
       id: 1,
       title: 'Starter Package',
       description: 'Perfect for beginners. Includes basic equipment and plants to get you started on your aquascaping journey.',
-      price: '99.99',
+      price: '90',
       image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png', // Placeholder image
       icon: 'https://via.placeholder.com/60', // Example icon image URL
       features: ['Beginner-friendly', 'Affordable', 'Easy to set up'],
@@ -87,8 +87,8 @@ const ProductsSection = () => {
       id: 2,
       title: 'Advanced Setup',
       description: 'For enthusiasts looking to create more complex aquascapes. Includes premium equipment and a wider variety of plants.',
-      price: '249.99',
-      image: 'https://via.placeholder.com/250', // Placeholder image
+      price: '250',
+      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png', // Placeholder image
       icon: 'https://via.placeholder.com/60', // Example icon image URL
       features: ['High-quality equipment', 'Diverse plant collection', 'Suitable for complex designs'],
     },
@@ -96,8 +96,8 @@ const ProductsSection = () => {
       id: 3,
       title: 'Professional Kit',
       description: 'Our top-tier offering for serious aquascaper. Includes high-end equipment, rare plants, and personalized design consultation.',
-      price: '499.99',
-      image: 'https://via.placeholder.com/250', // Placeholder image
+      price: '500',
+      image: 'https://cdn.pixabay.com/photo/2024/06/26/23/36/package-8856091_640.png', // Placeholder image
       icon: 'https://via.placeholder.com/60', // Example icon image URL
       features: ['Top-tier equipment', 'Rare plant collection', 'Personalized consultation'],
     },

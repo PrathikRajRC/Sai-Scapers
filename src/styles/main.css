@@ -276,40 +276,48 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 3px solid var(--secondary-color);
 }
 
 .product-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px; /* Increased height */
+  object-fit: contain;
+  padding: 1rem;
 }
 
 .product-image-placeholder {
   width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  height: 200px; /* Increased height */
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.7) 0%, rgba(224, 242, 254, 0.7) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(5px);
 }
 
-.product-image-placeholder::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  animation: shimmer 1.5s infinite;
+.product-image-placeholder img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  padding: 0.5rem;
 }
 
 .product-icon-placeholder {
@@ -336,6 +344,10 @@ html {
 
 .product-content {
   padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-title {
@@ -350,6 +362,7 @@ html {
   opacity: 0.8;
   margin-bottom: 1rem;
   line-height: 1.5;
+  flex-grow: 1;
 }
 
 .product-price {
@@ -686,4 +699,73 @@ html {
   100% {
     transform: translateX(100%);
   }
+}
+
+/* Service Card Styles */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid var(--primary-color);
+  padding: 1.5rem;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.service-icon-container {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.service-description {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.service-learn-more {
+  color: var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.service-learn-more:hover {
+  color: var(--secondary-color);
 }

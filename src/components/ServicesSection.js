@@ -55,18 +55,16 @@ const services = [
 
 const ServiceCard = ({ service, onClick }) => (
   <div 
-    className="bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-green-100 cursor-pointer"
+    className="service-card"
     onClick={() => onClick(service)}
   >
-    <div className="flex items-center justify-center w-16 h-16 mb-6 bg-green-600 rounded-full text-white mx-auto">
+    <div className="service-icon-container">
       <service.icon size={32} />
     </div>
-    <h3 className="text-2xl font-semibold mb-3 text-center text-green-700">{service.name}</h3>
-    <p className="text-gray-600 text-center line-clamp-3">{service.description}</p>
-    <div className="mt-4 text-center">
-      <span className="text-green-600 font-semibold inline-flex items-center">
-        Learn More <ChevronRight size={20} className="ml-1" />
-      </span>
+    <h3 className="service-title">{service.name}</h3>
+    <p className="service-description">{service.description}</p>
+    <div className="service-learn-more">
+      Learn More <ChevronRight size={20} className="ml-1" />
     </div>
   </div>
 );
