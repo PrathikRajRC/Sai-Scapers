@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5'; // Correct close icon import from react-icons/io5
-import { FaBox, FaTools, FaCrown, FaLeaf, FaWater } from 'react-icons/fa';
+import { FaBox, FaTools, FaCrown } from 'react-icons/fa';
 
 // Modal component to display the product details
 const ProductModal = ({ product, onClose }) => {
