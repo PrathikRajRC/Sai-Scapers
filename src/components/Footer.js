@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -103,7 +104,10 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <p className="mb-2">123 Nature Street, Green City, 12345</p>
             <p className="mb-2">Phone: (123) 456-7890</p>
-            <p className="mb-2">Email: info@saiscaper.com</p>
+            <p className="flex items-center text-white">
+              <FiMail className="mr-3 text-emerald-600" />
+              <a href="mailto:saiscaper.harshith@gmail.com" className="hover:text-emerald-600 transition-colors duration-300">saiscaper.harshith@gmail.com</a>
+            </p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-green-700 text-center">

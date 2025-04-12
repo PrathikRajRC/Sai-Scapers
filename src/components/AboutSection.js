@@ -31,12 +31,13 @@ const AboutSection = () => {
           </div>
           
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
-          <div className="relative w-full max-w-4xl mx-auto lg:ml-auto rounded-3xl overflow-hidden shadow-2xl aspect-video">
+            <div className="relative w-full max-w-4xl mx-auto lg:ml-auto rounded-3xl overflow-hidden shadow-2xl aspect-video backdrop-blur-md bg-white/30 border border-white/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 to-transparent rounded-3xl" />
               <iframe 
-                className="absolute top-0 left-0 w-full h-full" 
+                className="absolute top-0 left-0 w-full h-full rounded-3xl"
                 src="https://www.youtube-nocookie.com/embed/pQ9__bgJLCo?si=6xOjOiuaGxGgdXBl&rel=0&autoplay=1&mute=1&loop=1&playlist=pQ9__bgJLCo" 
                 title="YouTube video player" 
-                frameBorder="2" 
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerPolicy="strict-origin-when-cross-origin" 
                 allowFullScreen
