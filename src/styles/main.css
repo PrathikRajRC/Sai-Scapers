@@ -615,7 +615,7 @@ html {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  min-height: 400px;
+  min-height: 450px; /* Increased from 400px */
   display: flex;
   flex-direction: column;
   border-bottom: 3px solid var(--primary-color);
@@ -852,7 +852,7 @@ html {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  min-height: 300px;
+  min-height: 350px; /* Increased from 300px */
   display: flex;
   flex-direction: column;
   border-bottom: 3px solid var(--primary-color);
@@ -916,7 +916,7 @@ html {
 /* Product Card Mobile Adjustments */
 @media (max-width: 768px) {
   .product-card {
-    min-height: 280px;
+    min-height: 320px; /* Increased from 280px */
     padding: 0;
     width: 100%;
     margin: 0 auto;
@@ -967,7 +967,7 @@ html {
 /* Service Card Mobile Adjustments */
 @media (max-width: 768px) {
   .service-card {
-    min-height: 220px;
+    min-height: 280px; /* Increased from 220px */
     padding: 0.75rem;
     width: 100%;
     margin: 0 auto;
@@ -1055,5 +1055,45 @@ html {
     box-sizing: border-box;
     margin: 0.5rem;
     padding: 1rem;
+  }
+  
+  /* More compact modal in mobile view */
+  .product-modal-content,
+  .service-modal .bg-white {
+    width: 90%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem;
+    padding: 0.75rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .product-modal-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-modal-image {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .features li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .price {
+    margin-top: 0.5rem;
+  }
+  
+  /* Adjust button padding in modals */
+  .product-modal-content button,
+  .service-modal button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
