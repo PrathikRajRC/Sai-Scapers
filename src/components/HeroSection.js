@@ -4,8 +4,8 @@ import '../styles/main.css';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="hero">
-      <div className="hero-content">
+    <section id="home" className="hero w-full box-border">
+      <div className="hero-content px-4 w-full box-border">
         <h1 className="hero-title">Discover the Art of Live Scaping</h1>
         <p className="hero-subtitle">Transform your space with stunning aquascapes</p>
         <div className="hero-cta">

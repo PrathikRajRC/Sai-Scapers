@@ -36,11 +36,11 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
       isScrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-3">
-        <div className="flex justify-between items-center h-10">
+      <div className="container mx-auto px-2 box-border">
+        <div className="flex justify-between items-center h-10 w-full">
           {/* Logo */}
           <div className="logo flex items-center gap-1">
             <div className={`logo-icon w-5 h-5 rounded-full flex items-center justify-center transition-all duration-300 ${

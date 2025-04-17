@@ -20,11 +20,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Responsive container fixes */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* Responsive Typography */
@@ -90,7 +92,7 @@ html {
   }
 }
 
-/* Mobile Hero Section */
+/* Fixed Mobile Hero Section */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -99,9 +101,13 @@ html {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 4rem 1rem 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  padding-left: 0;
+  padding-right: 0;
   background-color: var(--primary-color);
   color: white;
+  width: 100%;
 }
 
 .hero-content {
@@ -158,7 +164,10 @@ html {
 /* Mobile Container */
 @media (max-width: 768px) {
   .container {
+    width: 100%;
+    max-width: 100%;
     padding: 0 0.75rem;
+    overflow-x: hidden;
   }
 }
 
@@ -579,6 +588,15 @@ html {
   padding: 2rem;
 }
 
+/* Fix Card Width and Spacing Issues */
+.products-grid, 
+.grid-cols-1,
+.grid-cols-2,
+.grid-cols-3 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -891,4 +909,151 @@ html {
 
 .service-learn-more:hover {
   color: var(--secondary-color);
+}
+
+/* Mobile Card Sizing Improvements */
+
+/* Product Card Mobile Adjustments */
+@media (max-width: 768px) {
+  .product-card {
+    min-height: 280px;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .product-image-placeholder {
+    height: 150px;
+  }
+  
+  .product-content {
+    padding: 1rem;
+  }
+  
+  .product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .product-price {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-icon-placeholder {
+    width: 45px;
+    height: 45px;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .product-icon-placeholder svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .add-to-cart-btn {
+    padding: 0.5rem;
+  }
+}
+
+/* Service Card Mobile Adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    min-height: 220px;
+    padding: 0.75rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .service-icon-container {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.75rem;
+  }
+  
+  .service-icon-container svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  .service-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .service-learn-more {
+    font-size: 0.9rem;
+  }
+}
+
+/* Grid Column Adjustments for Mobile */
+@media (max-width: 768px) {
+  .products-grid, 
+  [class*="grid-cols-"] {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  #products, 
+  #services {
+    padding: 1rem 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Fix spacing between elements */
+  .product-description,
+  .service-description {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  /* Fix buttons */
+  .add-to-cart-btn,
+  .btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Modal adjustments for mobile */
+@media (max-width: 768px) {
+  .product-modal-image {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .service-modal .bg-green-600 {
+    padding: 0.5rem !important;
+  }
+}
+
+/* Modal width fixes */
+@media (max-width: 768px) {
+  .product-modal-content,
+  .service-modal .bg-white {
+    width: 90%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
 }

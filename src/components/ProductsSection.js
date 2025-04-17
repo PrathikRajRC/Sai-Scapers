@@ -150,7 +150,7 @@ const ProductsSection = () => {
         <p className="text-lg sm:text-xl text-gray-700 mb-8 sm:mb-12 text-center max-w-3xl mx-auto">
           Discover our range of aquascaping products and services designed to transform your space into a thriving underwater ecosystem. We offer three tiers to suit different needs and budgets.
         </p>
-        <div className="products-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="products-grid grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-12 w-full box-border">
           {products.map((product) => (
             <ProductCard
               key={product.id}
