@@ -39,8 +39,8 @@ const services = [
   {
     name: 'Paludariums',
     icon: CloudRain,
-    category: 'mixed',
-    description: 'Unique, mixed environments combining land and water for stunning displays.',
+    category: 'hybrid',
+    description: 'Unique, hybrid environments combining land and water for stunning displays.',
     details: 'Paludariums offer the best of both worlds, combining aquatic and terrestrial elements in one captivating display. Our expert designers create these complex ecosystems to showcase a diverse range of plants and animals in a harmonious, naturalistic setting.',
     features: ['Custom design', 'Plant selection', 'Water feature integration', 'Animal habitat creation', 'Specialized lighting and climate control']
   },
@@ -67,7 +67,7 @@ const categories = [
   { id: 'all', name: 'All Services' },
   { id: 'aquatic', name: 'Aquatic' },
   { id: 'terrestrial', name: 'Terrestrial' },
-  { id: 'mixed', name: 'Mixed Environments' }
+  { id: 'hybrid', name: 'hybrid Environments' }
 ];
 
 // Enhanced Service Card Component with improved animations
