@@ -1,84 +1,106 @@
 import React, { useState, useEffect } from 'react';
-import { Fish, Leaf, Droplets, TreePine, CloudRain, Bird, Waves, ChevronRight, X, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Fish, Leaf, Droplets, TreePine, CloudRain, Bird, Waves, ChevronRight, X, ArrowRight, Award, Star } from 'lucide-react';
 import placeholderImg from '../assets/images/acq.jpg';
 
-// Services data
+// Services data with enhanced professional descriptions
 const services = [
   {
-    name: 'Aquascaping',
+    name: 'Professional Aquascaping',
     icon: Fish,
     category: 'aquatic',
-    description: 'Breathtaking underwater worlds with custom aquariums showcasing vibrant aquatic plants and natural hardscapes.',
-    details: 'Our aquascaping service transforms your aquarium into a living work of art. We carefully select and arrange aquatic plants, rocks, and driftwood to create stunning underwater landscapes. Our expert team ensures that your aquascape is not only beautiful but also sustainable and easy to maintain.',
-    features: ['Custom aquarium design', 'Plant selection and arrangement', 'Hardscape installation', 'Lighting and filtration setup', 'Ongoing maintenance plans']
+    price: 'Starting from ₹15,000',
+    duration: '2-4 weeks',
+    maintenance: 'Monthly service available',
+    description: 'Award-winning aquascaping design and installation services featuring premium aquatic plants and sustainable ecosystem management.',
+    details: 'Our certified aquascaping specialists create breathtaking underwater landscapes using advanced design principles and premium materials. Each aquascape is meticulously planned and executed with attention to plant compatibility, lighting requirements, and long-term sustainability. We use only the finest aquatic plants, carefully selected hardscape materials, and state-of-the-art filtration systems.',
+    features: ['Professional design consultation', 'Premium plant selection & sourcing', 'Custom hardscape installation', 'Advanced lighting & filtration setup', 'Comprehensive maintenance plans', 'Water chemistry optimization', '6-month warranty included']
   },
   {
-    name: 'Terrariums',
+    name: 'Designer Terrariums',
     icon: Leaf,
     category: 'terrestrial',
-    description: 'Low-maintenance, beautifully crafted miniature ecosystems for your home or office.',
-    details: 'Bring a piece of nature indoors with our custom terrariums. These self-contained ecosystems are perfect for homes and offices, requiring minimal care while providing maximum beauty. We create terrariums in various styles, from lush tropical forests to arid desert landscapes.',
-    features: ['Custom terrarium design', 'Plant and substrate selection', 'Decorative elements', 'Care instructions', 'Maintenance kits available']
+    price: 'Starting from ₹3,500',
+    duration: '1-2 weeks',
+    maintenance: 'Quarterly check-ups',
+    description: 'Bespoke terrarium designs crafted with precision using premium materials and sustainable practices for lasting beauty.',
+    details: 'Our designer terrariums are more than decorative pieces—they are living ecosystems engineered for optimal plant health and minimal maintenance. Using scientifically-selected plant combinations and premium substrates, we create self-sustaining environments that thrive for years with minimal intervention.',
+    features: ['Custom design consultation', 'Premium plant & substrate selection', 'Artistic arrangement & styling', 'Care & maintenance guides', 'Replacement guarantee', 'Seasonal refresh service', 'Corporate installation available']
   },
   {
-    name: 'Live Ponds',
+    name: 'Luxury Water Features',
     icon: Droplets,
     category: 'aquatic',
-    description: 'Custom outdoor water features designed to enhance the ambiance of any outdoor space.',
-    details: 'Add tranquility and natural beauty with our custom water features to your outdoor space. We design and install ponds that seamlessly integrate with your existing landscape, creating a peaceful oasis for you to enjoy.',
-    features: ['Custom pond design', 'Filtration and circulation systems', 'Aquatic plant selection', 'Fish stocking options', 'Waterfall and stream features']
+    price: 'Starting from ₹45,000',
+    duration: '3-6 weeks',
+    maintenance: 'Bi-weekly service',
+    description: 'High-end outdoor water installations designed to transform your landscape into a tranquil sanctuary with professional-grade systems.',
+    details: 'Our luxury water features combine engineering excellence with artistic vision to create stunning focal points for your outdoor space. From koi ponds to cascading waterfalls, each installation is designed with advanced filtration, circulation, and lighting systems to ensure crystal-clear water and optimal aquatic life health.',
+    features: ['Site assessment & custom design', 'Professional excavation & installation', 'Advanced filtration systems', 'LED lighting integration', 'Aquatic plant establishment', 'Fish stocking consultation', 'Comprehensive warranty & support']
   },
   {
-    name: 'Live Gardens',
+    name: 'Landscape Architecture',
     icon: TreePine,
     category: 'terrestrial',
-    description: 'Professional landscaping services to make your greenery dreams come alive.',
-    details: 'Whether you want to create an indoor jungle or transform your outdoor space, our live garden services cater to all your needs. We work with you to design and implement gardens that reflect your style and thrive in your specific environment.',
-    features: ['Custom garden design', 'Plant sourcing', 'Irrigation system installation', 'Hardscaping elements', 'Seasonal maintenance plans']
+    price: 'Starting from ₹25,000',
+    duration: '4-8 weeks',
+    maintenance: 'Seasonal maintenance',
+    description: 'Professional landscape design and installation services creating sustainable, beautiful outdoor environments tailored to your climate.',
+    details: 'Our landscape architecture service transforms outdoor spaces into stunning, sustainable environments. We specialize in native plant selection, water-efficient irrigation, and creating gardens that thrive in local climate conditions while providing year-round visual interest and ecological benefits.',
+    features: ['Professional landscape design', 'Native plant specialization', 'Irrigation system design', 'Hardscape integration', 'Soil analysis & preparation', 'Seasonal planting schedules', 'Ongoing horticultural support']
   },
   {
-    name: 'Paludariums',
+    name: 'Paludarium Systems',
     icon: CloudRain,
     category: 'hybrid',
-    description: 'Unique, hybrid environments combining land and water for stunning displays.',
-    details: 'Paludariums offer the best of both worlds, combining aquatic and terrestrial elements in one captivating display. Our expert designers create these complex ecosystems to showcase a diverse range of plants and animals in a harmonious, naturalistic setting.',
-    features: ['Custom design', 'Plant selection', 'Water feature integration', 'Animal habitat creation', 'Specialized lighting and climate control']
+    price: 'Starting from ₹35,000',
+    duration: '3-5 weeks',
+    maintenance: 'Monthly specialized care',
+    description: 'Complex ecosystem installations combining aquatic and terrestrial elements with precision climate control and specialized lighting.',
+    details: 'Paludariums represent the pinnacle of ecosystem design, combining water and land environments in perfect harmony. Our systems feature advanced climate control, specialized lighting, and carefully balanced plant and animal communities that create stunning, naturalistic displays.',
+    features: ['Ecosystem design & planning', 'Climate control integration', 'Specialized lighting systems', 'Plant & animal habitat creation', 'Water feature engineering', 'Automated monitoring systems', 'Expert ecosystem management']
   },
   {
-    name: 'Aviaries',
+    name: 'Custom Aviaries',
     icon: Bird,
     category: 'terrestrial',
-    description: 'Custom-designed bird habitats that ensure the wellbeing of your birds while offering functionality and charm.',
-    details: 'Our custom aviaries provide a safe and enriching environment for your feathered friends while adding a unique architectural element to your space. We design aviaries that cater to the specific needs of your birds while complementing your existing decor or outdoor landscape.',
-    features: ['Custom aviary design', 'Bird-safe plant selection', 'Perch and nest box installation', 'Feeding and watering systems', 'Easy-clean features']
+    price: 'Starting from ₹55,000',
+    duration: '4-6 weeks',
+    maintenance: 'Monthly health checks',
+    description: 'Professional aviary design and construction with emphasis on bird welfare, safety, and aesthetic integration with your environment.',
+    details: 'Our custom aviaries are designed with bird welfare as the top priority, featuring species-appropriate sizing, enrichment elements, and safety features. Each aviary is constructed using premium materials and designed to complement your outdoor space while providing an optimal environment for your feathered companions.',
+    features: ['Species-specific design', 'Premium construction materials', 'Safety & enrichment features', 'Feeding & watering systems', 'Easy maintenance access', 'Weather protection systems', 'Veterinary consultation included']
   },
   {
-    name: 'Marine Aquascapes',
+    name: 'Marine Reef Systems',
     icon: Waves,
     category: 'aquatic',
-    description: 'Bring the magic of the ocean into your space.',
-    details: 'Experience the vibrant colors and diverse life of coral reefs in your own home or office. Our marine aquascapes are carefully designed to recreate the beauty of ocean ecosystems while ensuring a stable and thriving environment for delicate marine life.',
-    features: ['Coral selection', 'Marine fish selection', 'Advanced filtration systems', 'Specialized lighting', 'Water chemistry management']
+    price: 'Starting from ₹75,000',
+    duration: '4-8 weeks',
+    maintenance: 'Bi-weekly expert care',
+    description: 'Professional marine aquarium installations featuring live coral reefs with advanced life support systems and expert marine biology consultation.',
+    details: 'Our marine reef systems bring the beauty of tropical coral reefs into your space with professional-grade life support systems, carefully selected marine life, and ongoing expert care. Each system is designed for long-term success with advanced filtration, lighting, and monitoring technology.',
+    features: ['Marine biology consultation', 'Live coral selection & placement', 'Advanced life support systems', 'Specialized marine lighting', 'Water chemistry management', 'Marine livestock consultation', 'Emergency support services']
   }
 ];
 
 // Categories for filtering
 const categories = [
   { id: 'all', name: 'All Services' },
-  { id: 'aquatic', name: 'Aquatic' },
-  { id: 'terrestrial', name: 'Terrestrial' },
-  { id: 'hybrid', name: 'hybrid Environments' }
+  { id: 'aquatic', name: 'Aquatic Systems' },
+  { id: 'terrestrial', name: 'Terrestrial Design' },
+  { id: 'hybrid', name: 'Hybrid Ecosystems' }
 ];
 
-// Enhanced Service Card Component with improved animations
+// Enhanced Service Card Component
 const ServiceCard = ({ service, onClick, index }) => (
   <div
-    className="group bg-gradient-to-br from-white to-green-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer relative border border-green-50/50 hover:border-green-200 animate-fadeInUp"
+    className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer relative border border-emerald-100/50 hover:border-emerald-200 animate-fadeInUp hover:-translate-y-1 transform"
     onClick={() => onClick(service)}
     style={{ animationDelay: `${index * 100}ms` }}
   >
     {/* Enhanced image treatment with hover effects */}
-    <div className="relative h-60 overflow-hidden">
+    <div className="relative h-64 overflow-hidden">
       <img
         src={service.image || placeholderImg}
         alt={service.name}
@@ -87,31 +109,42 @@ const ServiceCard = ({ service, onClick, index }) => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
       
-      {/* Enhanced icon overlay with subtle pulse animation */}
-      <div className="absolute top-4 right-4 bg-white/15 backdrop-blur-sm p-2.5 rounded-full transform group-hover:scale-110 transition-transform duration-300 group-hover:bg-white/25 border border-white/10 group-hover:border-white/30 shadow-lg">
-        <service.icon size={22} className="text-white drop-shadow-lg group-hover:rotate-3 transition-all duration-500" />
+      {/* Enhanced icon overlay */}
+      <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm p-3 rounded-full transform group-hover:scale-110 transition-transform duration-300 group-hover:bg-white/30 border border-white/20 shadow-lg">
+        <service.icon size={24} className="text-white drop-shadow-lg" />
       </div>
       
-      {/* Enhanced service title overlay with improved animation */}
-      <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-        <h3 className="text-white text-2xl font-semibold drop-shadow-lg font-serif mb-2 group-hover:scale-105 transition-transform origin-left duration-500">{service.name}</h3>
-        <div className="w-16 h-0.5 bg-gradient-to-r from-green-400 to-green-300 rounded-full transform origin-left scale-0 group-hover:scale-100 transition-transform duration-700 delay-100"></div>
+      {/* Service title overlay */}
+      <div className="absolute bottom-0 left-0 right-0 p-6">
+        <h3 className="text-white text-2xl font-bold drop-shadow-lg mb-2 group-hover:text-green-100 transition-colors duration-300">{service.name}</h3>
       </div>
     </div>
 
-    {/* Redesigned content area with improved typography */}
+    {/* Professional content area */}
     <div className="p-6">      
-      <p className="text-gray-600 leading-relaxed text-sm md:text-base line-clamp-3 mt-1 group-hover:text-gray-800 transition-colors duration-300">
+      <p className="text-gray-600 leading-relaxed text-sm mb-4 line-clamp-3">
         {service.description}
       </p>
       
-      <div className="mt-6 flex items-center justify-end">
-        <button className="flex items-center text-green-700 font-medium text-sm tracking-wide transform group-hover:-translate-y-0.5 transition-all duration-300 ease-out group-hover:text-green-800">
-          <span className="relative overflow-hidden inline-block">
-            <span className="relative z-10">Explore</span>
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-green-400 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-          </span>
-          <ArrowRight size={16} className="ml-2 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+      {/* Service highlights */}
+      <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+        <span className="flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded-full">
+          <Star size={14} className="text-yellow-500" />
+          <span className="text-yellow-700 font-medium">Premium Quality</span>
+        </span>
+        <span className="flex items-center gap-1 bg-emerald-50 px-2 py-1 rounded-full">
+          <Award size={14} className="text-emerald-600" />
+          <span className="text-emerald-700 font-medium">Certified</span>
+        </span>
+      </div>
+      
+      <div className="flex items-center justify-between">
+        <div className="text-sm text-gray-500">
+          <span className="font-medium text-gray-600">Maintenance:</span> {service.maintenance}
+        </div>
+        <button className="flex items-center text-emerald-700 font-semibold text-sm hover:text-emerald-800 transition-colors bg-emerald-50 px-3 py-1 rounded-full hover:bg-emerald-100">
+          View Details
+          <ArrowRight size={16} className="ml-1 transform group-hover:translate-x-1 transition-transform duration-300" />
         </button>
       </div>
     </div>
@@ -161,47 +194,44 @@ const ServiceModal = ({ service, onClose }) => {
                 >
                   <X size={16} className="text-white" />
                 </button>
-              </div>
-              
-              <div className="md:mb-8">
-                <span className="text-green-300 text-xs font-medium tracking-widest uppercase mb-2 inline-block">7T Scapers</span>
+              </div>                <div className="md:mb-8">
+                <span className="text-emerald-300 text-xs font-medium tracking-widest uppercase mb-2 inline-block">Sai Scapers</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-white font-serif leading-tight">{service.name}</h2>
               </div>
             </div>
           </div>
           
           {/* Right content column with improved vertical spacing */}
-          <div className="md:w-3/5 p-6 md:p-10 flex flex-col md:h-full overflow-y-auto">
-            {/* Service content with better vertical rhythm */}
-            <div className="mb-8 md:mb-10">
+          <div className="md:w-3/5 p-6 md:p-10 flex flex-col md:h-full overflow-y-auto">            {/* Service content with professional details */}            <div className="mb-8 md:mb-10">
               <div className="flex items-center mb-5">
-                <div className="w-1.5 h-7 bg-gradient-to-b from-green-400 to-green-600 rounded-full mr-3"></div>
-                <h3 className="text-xl text-green-800 font-serif font-medium">About This Service</h3>
+                <div className="w-1.5 h-7 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full mr-3"></div>
+                <h3 className="text-xl text-emerald-800 font-serif font-medium">Service Details</h3>
               </div>
-              <p className="text-gray-700 leading-relaxed md:text-lg">{service.details}</p>
+              <p className="text-gray-700 leading-relaxed md:text-lg mb-6">{service.details}</p>
             </div>
-            
-            {/* Premium features section with consistent spacing */}
-            <div className="mb-8 md:mb-auto bg-green-50/50 p-5 md:p-6 rounded-xl border border-green-100/50">
+              {/* Premium features section */}
+            <div className="mb-8 md:mb-auto bg-emerald-50/50 p-5 md:p-6 rounded-xl border border-emerald-100/50">
               <div className="flex items-center mb-5">
-                <div className="w-1.5 h-7 bg-gradient-to-b from-green-400 to-green-600 rounded-full mr-3"></div>
-                <h3 className="text-xl text-green-800 font-serif font-medium">What We Offer</h3>
+                <div className="w-1.5 h-7 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full mr-3"></div>
+                <h3 className="text-xl text-emerald-800 font-serif font-medium">Service Inclusions</h3>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+              <div className="grid grid-cols-1 gap-3">
                 {service.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start group">
-                    <div className="flex-shrink-0 mt-1 mr-3 text-green-600 bg-green-100/70 rounded-full p-1 group-hover:bg-green-200 transition-colors duration-300">
+                    <div className="flex-shrink-0 mt-1 mr-3 text-emerald-600 bg-emerald-100/70 rounded-full p-1 group-hover:bg-emerald-200 transition-colors duration-300">
                       <ChevronRight size={12} />
                     </div>
-                    <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300">{feature}</span>
+                    <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300 font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
-            
-            {/* Action buttons aligned at bottom with proper spacing */}
+              {/* Action buttons aligned at bottom with proper spacing */}
             <div className="mt-5 md:mt-8 pt-5 border-t border-gray-100 flex flex-wrap md:flex-nowrap justify-between items-center">
-              <span className="text-gray-500 text-sm font-medium mb-3 md:mb-0">Interested in this service?</span>
+              <div className="text-gray-500 text-sm font-medium mb-3 md:mb-0">
+                <p>Ready to transform your space?</p>
+                <p className="text-xs text-gray-400 mt-1">Free consultation • Professional installation • Ongoing support</p>
+              </div>
               <div className="flex gap-3 w-full md:w-auto justify-end">
                 <button
                   onClick={onClose}
@@ -209,13 +239,13 @@ const ServiceModal = ({ service, onClose }) => {
                 >
                   Close
                 </button>
-                <a 
-                  href="#contact"
+                <Link 
+                  to="/contact"
                   onClick={onClose}
-                  className="px-6 py-2.5 bg-gradient-to-r from-green-700 to-green-600 text-white rounded-lg flex items-center hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 transform font-medium text-sm group"
+                  className="px-6 py-2.5 bg-gradient-to-r from-green-700 to-green-600 text-white rounded-lg flex items-center hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 transform font-medium text-sm group hover:from-green-800 hover:to-green-700"
                 >
-                  Contact Us <ArrowRight size={14} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
+                  Get Quote <ArrowRight size={14} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
               </div>
             </div>
           </div>
@@ -254,10 +284,8 @@ export default function ServicesSection() {
       <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-green-400 rounded-full opacity-60 animate-ping" style={{animationDuration: '4s'}}></div>
       <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-emerald-400 rounded-full opacity-50 animate-ping" style={{animationDuration: '5s', animationDelay: '1s'}}></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Premium Section Title with improved typography */}
-        <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center leading-tight relative inline-block">
+      <div className="container mx-auto px-4 relative z-10">        {/* Premium Section Title with improved typography */}
+        <div className="text-center mb-16 relative">          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center leading-tight relative inline-block">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-800 to-green-600 font-serif">Our Services</span>
             <span className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-green-400/20 via-green-500 to-green-400/20 rounded-full"></span>
           </h2>
@@ -265,10 +293,10 @@ export default function ServicesSection() {
           <div className="max-w-3xl mx-auto mb-10 text-center">
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed tracking-wide font-light">
               We specialize in creating and maintaining breathtaking living environments tailored to your vision. 
-              Our services go beyond design—we provide regular maintenance to give you a completely hassle-free experience.
+              Our comprehensive services include expert design, premium installation, and ongoing maintenance for a completely hassle-free experience.
             </p>
             <p className="text-green-700 font-medium italic mt-6 text-lg md:text-xl font-serif">
-              Your only job? Relax and enjoy the beauty we bring to your space.
+              "Your only responsibility? Relax and enjoy the natural beauty we bring to your space."
             </p>
           </div>
         </div>
@@ -326,59 +354,20 @@ export default function ServicesSection() {
           <div className="relative inline-block group">
             {/* Improved Glowing Effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-green-200 to-green-300/70 blur-2xl opacity-60 group-hover:opacity-80 transform scale-120 group-hover:scale-150 transition-all duration-1000 rounded-full"></div>
-            
-            {/* Enhanced Button with better animations */}
-            <a 
-              href="#contact" 
+              {/* Enhanced Button with better animations */}
+            <Link 
+              to="/contact" 
               className="relative z-10 bg-gradient-to-r from-green-600 to-green-700 text-white px-10 py-4 rounded-lg text-lg font-semibold shadow-md hover:shadow-xl transition-all duration-500 inline-flex items-center group-hover:-translate-y-1 transform"
             >
               Begin Your Journey 
               <ArrowRight size={20} className="ml-3 transform group-hover:translate-x-1.5 transition-transform duration-300" />
-            </a>
+            </Link>
           </div>
           
           <p className="text-green-700 mt-6 text-sm md:text-base font-medium tracking-wide font-serif">
             Transform Your Space Into A Natural Sanctuary
           </p>
-        </div>
-      </div>
+        </div>      </div>
     </section>
   );
 }
-
-// CSS keyframes for animations
-// @keyframes fadeIn {
-//   from { opacity: 0; }
-//   to { opacity: 1; }
-// }
-// 
-// @keyframes scaleIn {
-//   from { transform: scale(0.95); opacity: 0; }
-//   to { transform: scale(1); opacity: 1; }
-// }
-// 
-// @keyframes fadeInUp {
-//   from { opacity: 0; transform: translateY(20px); }
-//   to { opacity: 1; transform: translateY(0); }
-// }
-// 
-// .animate-fadeIn {
-//   animation: fadeIn 0.4s forwards;
-// }
-// 
-// .animate-scaleIn {
-//   animation: scaleIn 0.4s forwards;
-// }
-// 
-// .animate-fadeInUp {
-//   animation: fadeInUp 0.5s forwards;
-// }
-// 
-// .scrollbar-hide {
-//   -ms-overflow-style: none;
-//   scrollbar-width: none;
-// }
-// 
-// .scrollbar-hide::-webkit-scrollbar {
-//   display: none;
-// }

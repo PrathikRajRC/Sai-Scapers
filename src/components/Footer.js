@@ -1,15 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const products = [
-    'Starter Package',
-    'Advanced Setup',
-    'Professional Kit',
-  ];
 
   return (
     <footer className="bg-green-800 text-white py-12">
@@ -52,53 +47,49 @@ const Footer = () => {
                 <FaLinkedin size={24} />
               </a>
             </div>
-          </div>
-          <div>
+          </div>          <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Products', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-green-300 transition-colors duration-300"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="hover:text-green-300 transition-colors duration-300">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/" onClick={() => {
+                  setTimeout(() => {
+                    const element = document.getElementById('about');
+                    if (element) {
+                      window.scrollTo({
+                        top: element.offsetTop - 80,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }, 100);
+                }} className="hover:text-green-300 transition-colors duration-300">
+                  About
+                </Link>
+              </li>              <li>
+                <Link to="/services" className="hover:text-green-300 transition-colors duration-300">
+                  Services
+                </Link>
+              </li>
             </ul>
-          </div>
-          <div>
+          </div><div>
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {['Aquascaping', 'Terrariums', 'Live Ponds', 'Garden Design', 'Maintenance'].map(
                 (service) => (
                   <li key={service}>
-                    <a
-                      href="#services"
+                    <Link
+                      to="/services"
                       className="hover:text-green-300 transition-colors duration-300"
                     >
                       {service}
-                    </a>
+                    </Link>
                   </li>
                 )
-              )}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Products</h3>
-            <ul className="space-y-2">
-              {products.map((product) => (
-                <li key={product}>
-                  <a
-                    href="#products"
-                    className="hover:text-green-300 transition-colors duration-300"
-                  >
-                    {product}
-                  </a>
-                </li>
-              ))}
-            </ul>
+              )}            </ul>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>

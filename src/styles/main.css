@@ -1097,3 +1097,186 @@ html {
     font-size: 0.9rem;
   }
 }
+
+/* Modern Navigation Enhancements */
+
+/* Glass-morphism backdrop support */
+.backdrop-blur-lg {
+  backdrop-filter: blur(20px);
+}
+
+/* Enhanced gradient animations */
+.nav-gradient-hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 50%, rgba(4, 120, 87, 0.1) 100%);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-gradient-hover:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.2) 50%, rgba(4, 120, 87, 0.2) 100%);
+  transform: translateY(-1px);
+}
+
+/* Modern button animations */
+.modern-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.modern-btn:hover::before {
+  left: 100%;
+}
+
+/* Enhanced shadow utilities */
+.shadow-emerald-glow {
+  box-shadow: 0 10px 25px -3px rgba(16, 185, 129, 0.1), 0 4px 6px -2px rgba(16, 185, 129, 0.05);
+}
+
+.shadow-emerald-glow:hover {
+  box-shadow: 0 20px 35px -3px rgba(16, 185, 129, 0.2), 0 8px 15px -2px rgba(16, 185, 129, 0.1);
+}
+
+/* Modern rounded corners */
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+/* Enhanced border gradients */
+.border-gradient {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.3)) border-box;
+  border: 1px solid transparent;
+}
+
+/* Smooth transitions for all nav elements */
+nav * {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile menu backdrop enhancement */
+.mobile-menu-backdrop {
+  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Ultra-compact navigation styles */
+.navbar-ultra-compact {
+  min-height: 48px; /* Ultra-compact height */
+}
+
+.navbar-ultra-compact .logo-icon {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.navbar-ultra-compact .logo-text {
+  font-size: 0.875rem !important; /* 14px */
+}
+
+.navbar-ultra-compact .nav-link {
+  padding: 0.375rem 0.5rem !important; /* 6px 8px */
+  font-size: 0.75rem !important; /* 12px */
+}
+
+.navbar-ultra-compact .cta-button {
+  padding: 0.375rem 0.75rem !important; /* 6px 12px */
+  font-size: 0.75rem !important; /* 12px */
+}
+
+.navbar-ultra-compact .mobile-menu-button {
+  padding: 0.5rem !important; /* 8px */
+}
+
+/* Ultra-compact mobile menu */
+.mobile-menu-ultra-compact {
+  padding: 1rem !important; /* 16px */
+}
+
+.mobile-menu-ultra-compact .menu-header {
+  padding-bottom: 0.5rem !important; /* 8px */
+  margin-bottom: 1rem !important; /* 16px */
+}
+
+.mobile-menu-ultra-compact .menu-links {
+  gap: 0.25rem !important; /* 4px */
+}
+
+.mobile-menu-ultra-compact .menu-link {
+  padding: 0.625rem 0.75rem !important; /* 10px 12px */
+}
+
+.mobile-menu-ultra-compact .menu-icon {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+/* Responsive typography for ultra-compact design */
+@media (max-width: 768px) {
+  .navbar-ultra-compact .logo-text {
+    font-size: 0.75rem !important; /* 12px on mobile */
+  }
+  
+  .navbar-ultra-compact .nav-link {
+    font-size: 0.625rem !important; /* 10px on mobile */
+  }
+}
+
+/* Additional animations for Services section */
+@keyframes scaleIn {
+  from { 
+    transform: scale(0.95); 
+    opacity: 0; 
+  }
+  to { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* Scrollbar hide utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Line clamp utility for service descriptions */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
