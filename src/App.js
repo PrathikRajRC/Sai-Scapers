@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import ServiceDetail from './pages/ServiceDetail';
 import Contact from './pages/Contact';
 
 const ScrollIndicator = () => {
@@ -38,10 +39,10 @@ export default function App() {
       <ScrollIndicator />
       <Navigation />
       
-      <main>
-        <Routes>
+      <main>        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
