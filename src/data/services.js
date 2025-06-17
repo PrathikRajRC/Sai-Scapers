@@ -28,43 +28,100 @@ export const services = [
         category: 'Plants',
         subcategories: [
           {
-            type: 'Stem Plants',            plants: [
-                {
+            type: 'Stem Plants',
+            plants: [
+              {
                 name: 'Ludwigia arcuata  ',
                 origin: 'US',
                 light: 'High',
                 co2: 'Recommended',
                 difficulty: 'Medium',
-                image: '/images/plants/ludwigia-arcuata.jpg'
+                image: '/images/plants/stem/ludwigia_arcuata.png'
               },
               {
-                name: 'Rotala Rotundifolia',
+                name: 'Rotala Macranda',
                 origin: 'Southeast Asia',
                 light: 'Medium to High',
                 co2: 'Recommended',
                 difficulty: 'Easy',
-                image: '/images/plants/rotala-rotundifolia.jpg'
-              },
-              {
-                name: 'Bacopa Caroliniana',
+                image: '/images/plants/stem/rotala_macranda.png'
+              },              {
+                name: 'Rotala Rotundifolia green',
                 origin: 'North America',
                 light: 'Medium',
                 co2: 'Optional',
                 difficulty: 'Easy',
-                image: '/images/plants/bacopa-caroliniana.jpg'
+                image: '/images/plants/stem/rotala_rotundifolia_green.png'
               },
               {
-                name: 'Ludwigia Repens',
+                name: 'Ludwigia Peruensis',
                 origin: 'North America',
                 light: 'Medium to High',
                 co2: 'Recommended',
                 difficulty: 'Medium',
-                image: '/images/plants/ludwigia-repens.jpg'
-              }
+                image: '/images/plants/stem/ludwigia_peruensis.png'
+              },
+              {
+                name: 'Hydrocolyte Verticillata',
+                origin: 'North America',
+                light: 'Medium to High',
+                co2: 'Recommended',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/hydrocolyte_verticillata.png'
+              },
+              {
+                name: 'Rotala Rotundifolia',
+                origin: 'North America',
+                light: 'Medium to High',
+                co2: 'Recommended',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/rotala_rotundifolia.png'
+              },
+              {
+                name: 'Rotala sp. Vietnam',
+                origin: 'North America',
+                light: 'Medium to High',
+                co2: 'Recommended',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/rotala_sp_vietnam.png'
+              },
+              {
+                name: 'Pogostemon Stellatus Dassen',
+                origin: 'North America',
+                light: 'Medium to High',
+                co2: 'Recommended',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/pogostemon_stellatus_dassen.png'
+              },
+              {
+                name: 'Rotala macaranda green',
+                origin: 'North America',
+                light: 'Medium to High',
+                co2: 'Recommended',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/rotala_macaranda_green.png'
+              },
+              {
+                name: 'Rotala rotundifolia `Hra`',
+                origin: 'North America',
+                light: 'Medium to High',
+                co2: 'Recommended',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/rotala_rotundifolia_hra.png'
+              },
+              {
+                name: 'Rotalla wallichi long leaf',
+                origin: 'North America',
+                light: 'Medium to High',
+                co2: 'Recommended',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/rotala_wallichi_long_leaf.png'
+              },
             ]
           },
           {
-            type: 'Rosette Plants',            plants: [
+            type: 'Rosette Plants',            
+            plants: [
               {
                 name: 'Amazon Sword',
                 origin: 'South America',

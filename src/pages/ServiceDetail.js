@@ -38,7 +38,7 @@ const ItemCard = ({ item, category }) => {
   };  const IconComponent = getCategoryIcon(category);
   return (
     <div className="bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-      <div className={`relative w-full h-16 bg-gradient-to-br ${getCategoryColor(category)} rounded-lg mb-2 overflow-hidden`}>
+      <div className={`relative w-full h-24 bg-gradient-to-br ${getCategoryColor(category)} rounded-lg mb-2 overflow-hidden`}>
         <img 
           src={item.image || plantPlaceholder} 
           alt={item.name || item}
@@ -71,7 +71,7 @@ const PlantCard = ({ plant }) => {
     }
   };  return (
     <div className="bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-      <div className="relative w-full h-16 bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg mb-2 overflow-hidden">
+      <div className="relative w-full h-24 bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg mb-2 overflow-hidden">
         <img 
           src={plant.image || placeholderImg} 
           alt={plant.name}
