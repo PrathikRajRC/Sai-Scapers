@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './styles/main.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
@@ -37,9 +38,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ScrollIndicator />
+      <ScrollToTop />
       <Navigation />
       
-      <main>        <Routes>
+      <main><Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:id" element={<ServiceDetail />} />
