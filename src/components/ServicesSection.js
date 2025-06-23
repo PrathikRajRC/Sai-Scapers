@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Award } from 'lucide-react';
-import placeholderImg from '../assets/images/acq.jpg';
+import placeholderImg from '../assets/images/acq.jpg'; // Fallback only if service image fails to load
 import { services, categories } from '../data/services';
 
 // Simple Service Card Component
 const ServiceCard = ({ service }) => {
   const IconComponent = service.icon;
+  
   return (
     <Link
       to={`/services/${service.id}`}
@@ -15,9 +16,13 @@ const ServiceCard = ({ service }) => {
       {/* Image */}
       <div className="h-48 overflow-hidden">
         <img 
-          src={placeholderImg} 
+          src={service.image} 
           alt={service.name}
           className="w-full h-full object-cover"
+          onError={(e) => {
+            // Fallback to placeholder if service image fails to load
+            e.target.src = placeholderImg;
+          }}
         />
       </div>
 

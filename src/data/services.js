@@ -1,11 +1,27 @@
 import { Fish, Leaf, Droplets, TreePine, CloudRain, Bird, Waves } from 'lucide-react';
 
-export const services = [
-  {
+// 🖼️ CUSTOM IMAGE PATHS - Edit these to use your own images
+// You can use any path: local images (/images/...), external URLs (https://...), or imported images
+// Examples:
+//   '/images/my-custom/aquarium.jpg'           - Local image in public folder
+//   'https://example.com/image.jpg'            - External URL
+//   require('../assets/images/my-image.jpg')   - Imported image from src/assets
+const serviceImages = {
+  aquascaping: '/images/services/aquascaping-main.jpg',          // Professional Aquascaping
+  terrarium: '/images/services/terrarium-main.webp',             // Designer Terrariums  
+  waterFeature: '/images/services/water-feature-main.jpg',      // Luxury Water Features
+  landscape: '/images/services/landscape-main.jpg',             // Landscape Architecture
+  paludarium: '/images/services/paludarium-main.jpg',           // Paludarium Systems
+  aviary: '/images/services/aviary-main.jpg',                   // Custom Aviaries
+  reef: '/images/services/reef-main.jpg'                        // Marine Reef Systems
+};
+
+export const services = [  {
     id: 'professional-aquascaping',
     name: 'Professional Aquascaping',
     icon: Fish,
     category: 'aquatic',
+    image: serviceImages.aquascaping,
     price: 'Starting from ₹15,000',
     duration: '2-4 weeks',
     maintenance: 'Monthly service available',
@@ -18,12 +34,11 @@ export const services = [
       'Advanced lighting & filtration setup',
       'Comprehensive maintenance plans',
       'Water chemistry optimization',
-      '6-month warranty included'    ],
-    gallery: [
-      '/images/aquascaping-1.jpg',
-      '/images/aquascaping-2.jpg',
-      '/images/aquascaping-3.jpg'
-    ],    requiredItems: [
+      '6-month warranty included'    ],    gallery: [
+      '/images/services/aquascaping-1.jpg',
+      '/images/services/aquascaping-2.jpg',
+      '/images/services/aquascaping-3.jpg'
+    ],requiredItems: [
       {
         category: 'Plants',
         subcategories: [
@@ -271,12 +286,11 @@ export const services = [
         ]
       }
     ]
-  },
-  {
-    id: 'designer-terrariums',
+  },  {    id: 'designer-terrariums',
     name: 'Designer Terrariums',
     icon: Leaf,
     category: 'terrestrial',
+    image: serviceImages.terrarium,
     price: 'Starting from ₹3,500',
     duration: '1-2 weeks',
     maintenance: 'Quarterly check-ups',
@@ -289,12 +303,11 @@ export const services = [
       'Care & maintenance guides',
       'Replacement guarantee',
       'Seasonal refresh service',
-      'Corporate installation available'    ],
-    gallery: [
-      '/images/terrarium-1.jpg',
-      '/images/terrarium-2.jpg',
-      '/images/terrarium-3.jpg'
-    ],    requiredItems: [
+      'Corporate installation available'    ],    gallery: [
+      '/images/services/terrarium-1.jpg',
+      '/images/services/terrarium-2.jpg',
+      '/images/services/terrarium-3.jpg'
+    ],requiredItems: [
       {
         category: 'Plants',
         subcategories: [
@@ -443,12 +456,11 @@ export const services = [
         ]
       }
     ]
-  },
-  {
-    id: 'luxury-water-features',
+  },  {    id: 'luxury-water-features',
     name: 'Luxury Water Features',
     icon: Droplets,
     category: 'aquatic',
+    image: serviceImages.waterFeature,
     price: 'Starting from ₹45,000',
     duration: '3-6 weeks',
     maintenance: 'Bi-weekly service',
@@ -461,11 +473,10 @@ export const services = [
       'LED lighting integration',
       'Aquatic plant establishment',
       'Fish stocking consultation',
-      'Comprehensive warranty & support'    ],
-    gallery: [
-      '/images/water-feature-1.jpg',
-      '/images/water-feature-2.jpg',
-      '/images/water-feature-3.jpg'
+      'Comprehensive warranty & support'    ],    gallery: [
+      '/images/services/water-feature-1.jpg',
+      '/images/services/water-feature-2.jpg',
+      '/images/services/water-feature-3.jpg'
     ],
     requiredItems: [      {
         category: 'Pumps & Filtration',
@@ -516,12 +527,12 @@ export const services = [
         ]
       }
     ]
-  },
-  {
+  },  {
     id: 'landscape-architecture',
     name: 'Landscape Architecture',
     icon: TreePine,
     category: 'terrestrial',
+    image: serviceImages.landscape,
     price: 'Starting from ₹25,000',
     duration: '4-8 weeks',
     maintenance: 'Seasonal maintenance',
@@ -534,11 +545,10 @@ export const services = [
       'Hardscape integration',
       'Soil analysis & preparation',
       'Seasonal planting schedules',
-      'Ongoing horticultural support'    ],
-    gallery: [
-      '/images/landscape-1.jpg',
-      '/images/landscape-2.jpg',
-      '/images/landscape-3.jpg'
+      'Ongoing horticultural support'    ],    gallery: [
+      '/images/services/landscape-1.jpg',
+      '/images/services/landscape-2.jpg',
+      '/images/services/landscape-3.jpg'
     ],
     requiredItems: [      {
         category: 'Plants',
@@ -591,12 +601,12 @@ export const services = [
         ]
       }
     ]
-  },
-  {
+  },  {
     id: 'paludarium-systems',
     name: 'Paludarium Systems',
     icon: CloudRain,
     category: 'hybrid',
+    image: serviceImages.paludarium,
     price: 'Starting from ₹35,000',
     duration: '3-5 weeks',
     maintenance: 'Monthly specialized care',
@@ -610,11 +620,10 @@ export const services = [
       'Water feature engineering',
       'Automated monitoring systems',
       'Expert ecosystem management'    ],
-    gallery: [
-      '/images/paludarium-1.jpg',
-      '/images/paludarium-2.jpg',
-      '/images/paludarium-3.jpg'
-    ],    requiredItems: [
+    gallery: [      '/images/services/paludarium-1.jpg',
+      '/images/services/paludarium-2.jpg',
+      '/images/services/paludarium-3.jpg'
+    ],requiredItems: [
       {
         category: 'Aquatic Plants',
         subcategories: [
@@ -771,12 +780,12 @@ export const services = [
         ]
       }
     ]
-  },
-  {
+  },  {
     id: 'custom-aviaries',
     name: 'Custom Aviaries',
     icon: Bird,
     category: 'terrestrial',
+    image: serviceImages.aviary,
     price: 'Starting from ₹55,000',
     duration: '4-6 weeks',
     maintenance: 'Monthly health checks',
@@ -789,11 +798,10 @@ export const services = [
       'Feeding & watering systems',
       'Easy maintenance access',
       'Weather protection systems',
-      'Veterinary consultation included'    ],
-    gallery: [
-      '/images/aviary-1.jpg',
-      '/images/aviary-2.jpg',
-      '/images/aviary-3.jpg'
+      'Veterinary consultation included'    ],    gallery: [
+      '/images/services/aviary-1.jpg',
+      '/images/services/aviary-2.jpg',
+      '/images/services/aviary-3.jpg'
     ],
     requiredItems: [
       {
@@ -833,12 +841,12 @@ export const services = [
         ]
       }
     ]
-  },
-  {
+  },  {
     id: 'marine-reef-systems',
     name: 'Marine Reef Systems',
     icon: Waves,
     category: 'aquatic',
+    image: serviceImages.reef,
     price: 'Starting from ₹75,000',
     duration: '4-8 weeks',
     maintenance: 'Bi-weekly expert care',
@@ -852,10 +860,9 @@ export const services = [
       'Water chemistry management',
       'Marine livestock consultation',
       'Emergency support services'    ],
-    gallery: [
-      '/images/reef-1.jpg',
-      '/images/reef-2.jpg',
-      '/images/reef-3.jpg'
+    gallery: [      '/images/services/reef-1.jpg',
+      '/images/services/reef-2.jpg',
+      '/images/services/reef-3.jpg'
     ],
     requiredItems: [      {
         category: 'Live Coral',

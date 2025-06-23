@@ -285,13 +285,16 @@ const ServiceDetail = () => {
                 </Link>
               </div>
             </div>
-            
-            {/* Image */}
+              {/* Image */}
             <div>
               <img 
-                src={placeholderImg} 
+                src={service.image} 
                 alt={service.name}
                 className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                onError={(e) => {
+                  // Fallback to placeholder if service image fails to load
+                  e.target.src = placeholderImg;
+                }}
               />
             </div>
           </div>
