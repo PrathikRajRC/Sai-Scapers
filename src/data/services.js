@@ -364,29 +364,85 @@ export const services = [
             type: 'Carpet Plants',
             plants: [
               {
-                name: 'Monte Carlo',
-                origin: 'Argentina',
-                light: 'Medium to High',
-                co2: 'Required',
-                difficulty: 'Medium',
-                image: '/images/plants/monte-carlo.jpg'
-              },
-              {
-                name: 'Dwarf Hairgrass',
-                origin: 'Worldwide',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
-                image: '/images/plants/dwarf-hairgrass.jpg'
-              },
-              {
-                name: 'Baby Tears',
-                origin: 'Cuba',
-                light: 'High',
-                co2: 'Required',
-                difficulty: 'Hard',
-                image: '/images/plants/baby-tears.jpg'
-              }
+                  name: 'Glossostigma elatinoides',
+                  origin: 'Eastern Australia',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Easy',
+                  image: '/images/plants/carpet/glossostigma_elatinoides.png'
+                },
+                {
+                  name: 'Hemianthus callitrichoides cuba',
+                  origin: 'West Indies (Cuba, Bahamas, etc.)',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Medium',
+                  image: '/images/plants/carpet/hemianthus_callitrichoides_cuba.png'
+                },
+                {
+                  name: 'Hydrocotyle tripartita',
+                  origin: 'New Zealand and Australia',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Easy',
+                  image: '/images/plants/carpet/hydrocotyle_tripartita.png'
+                },
+                {
+                  name: 'Hemianthus micranthemoides',
+                  origin: 'North America',
+                  light: 'Low',
+                  co2: 'Low',
+                  difficulty: 'Easy',
+                  image: '/images/plants/carpet/hemianthus_micranthemoides.png'
+                },
+                {
+                  name: 'Eleocharis parvula',
+                  origin: 'North America',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Medium',
+                  image: '/images/plants/carpet/eleocharis_parvula.png'
+                },
+                {
+                  name: 'Micranthemum Monte Carlo',
+                  origin: 'Argentina',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Easy',
+                  image: '/images/plants/carpet/micranthemum_monte_carlo.png'
+                },
+                {
+                  name: 'Uticularia graminifolia',
+                  origin: 'Asia',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Difficult',
+                  image: '/images/plants/carpet/utricularia_graminifolia.png'
+                },
+                {
+                  name: 'Eleocharis acicularis',
+                  origin: 'Europe, Asia, Americas',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Easy',
+                  image: '/images/plants/carpet/eleocharis_acicularis.png'
+                },
+                {
+                  name: 'Microcarpaea minima',
+                  origin: 'Southeast Asia, Japan, Northern Australia',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Easy',
+                  image: '/images/plants/carpet/microcarpaea_minima.png'
+                },
+                {
+                  name: 'Hydrocotyle tripartita mini',
+                  origin: 'Queensland, Australia',
+                  light: 'High',
+                  co2: 'High',
+                  difficulty: 'Easy',
+                  image: '/images/plants/carpet/hydrocotyle_tripartita_mini.png'
+                }
             ]
           },
           {
