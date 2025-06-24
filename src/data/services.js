@@ -16,7 +16,8 @@ const serviceImages = {
   reef: '/images/services/reef-main.jpg'                        // Marine Reef Systems
 };
 
-export const services = [  {
+export const services = [
+  {
     id: 'professional-aquascaping',
     name: 'Professional Aquascaping',
     icon: Fish,
@@ -34,11 +35,14 @@ export const services = [  {
       'Advanced lighting & filtration setup',
       'Comprehensive maintenance plans',
       'Water chemistry optimization',
-      '6-month warranty included'    ],    gallery: [
+      '6-month warranty included'
+    ],
+    gallery: [
       '/images/services/aquascaping-1.jpg',
       '/images/services/aquascaping-2.jpg',
       '/images/services/aquascaping-3.jpg'
-    ],requiredItems: [
+    ],
+    requiredItems: [
       {
         category: 'Plants',
         subcategories: [
@@ -46,96 +50,193 @@ export const services = [  {
             type: 'Stem Plants',
             plants: [
               {
-                name: 'Ludwigia arcuata  ',
+                name: 'Ludwigia arcuata',
                 origin: 'US',
                 light: 'High',
-                co2: 'Recommended',
+                co2: 'High',
                 difficulty: 'Medium',
                 image: '/images/plants/stem/ludwigia_arcuata.png'
               },
               {
                 name: 'Rotala Macranda',
-                origin: 'Southeast Asia',
-                light: 'Medium to High',
-                co2: 'Recommended',
+                origin: 'India, China, Vietnam, etc.',
+                light: 'Medium',
+                co2: 'Medium',
                 difficulty: 'Easy',
                 image: '/images/plants/stem/rotala_macranda.png'
-              },              {
+              },
+              {
                 name: 'Rotala Rotundifolia green',
-                origin: 'North America',
+                origin: 'Southeast Asia',
                 light: 'Medium',
-                co2: 'Optional',
+                co2: 'Medium',
                 difficulty: 'Easy',
                 image: '/images/plants/stem/rotala_rotundifolia_green.png'
               },
               {
                 name: 'Ludwigia Peruensis',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'Southeastern US',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
                 image: '/images/plants/stem/ludwigia_peruensis.png'
               },
               {
                 name: 'Hydrocolyte Verticillata',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'Americas and West Indies',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
                 image: '/images/plants/stem/hydrocolyte_verticillata.png'
               },
               {
                 name: 'Rotala Rotundifolia',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'India, China, Taiwan, etc.',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
                 image: '/images/plants/stem/rotala_rotundifolia.png'
               },
               {
                 name: 'Rotala sp. Vietnam',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'Vietnam',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
                 image: '/images/plants/stem/rotala_sp_vietnam.png'
               },
               {
                 name: 'Pogostemon Stellatus Dassen',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'Asia and Northern Australia',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Difficult',
                 image: '/images/plants/stem/pogostemon_stellatus_dassen.png'
               },
               {
                 name: 'Rotala macaranda green',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'India',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
                 image: '/images/plants/stem/rotala_macaranda_green.png'
               },
               {
                 name: 'Rotala rotundifolia `Hra`',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'Vietnam (Gia Lai)',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Easy',
                 image: '/images/plants/stem/rotala_rotundifolia_hra.png'
               },
               {
                 name: 'Rotalla wallichi long leaf',
-                origin: 'North America',
-                light: 'Medium to High',
-                co2: 'Recommended',
-                difficulty: 'Medium',
+                origin: 'Tropical Asia',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Difficult',
                 image: '/images/plants/stem/rotala_wallichi_long_leaf.png'
               },
+              {
+                name: 'Rotala sp. Bangladesh',
+                origin: 'Bangladesh',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
+                image: '/images/plants/stem/rotala_sp_bangladesh.png'
+              },
+              {
+                name: 'Rotala macrandra Bangladesh',
+                origin: 'Bangladesh',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
+                image: '/images/plants/stem/rotala_macrandra_bangladesh.png'
+              },
+              {
+                name: 'Rotala nanjenshan',
+                origin: 'Taiwan',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
+                image: '/images/plants/stem/rotala_nanjenshan.png'
+              },
+              {
+                name: 'Proserpinaca palustris',
+                origin: 'North & Central America, Caribbean',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Easy',
+                image: '/images/plants/stem/proserpinaca_palustris.png'
+              },
+              {
+                name: 'Pogostemon erectus',
+                origin: 'India',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/pogostemon_erectus.png'
+              },
+              {
+                name: 'Myriophyllium mattogrosense',
+                origin: 'Brazil (Mato Grosso)',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
+                image: '/images/plants/stem/myriophyllium_mattogrosense.png'
+              },
+              {
+                name: 'Ludwigia repens super red',
+                origin: 'North and Central America',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Difficult',
+                image: '/images/plants/stem/ludwigia_repens_super_red.png'
+              },
+              {
+                name: 'Rotala ceylon',
+                origin: 'Sri Lanka',
+                light: 'Low',
+                co2: 'Low',
+                difficulty: 'Easy',
+                image: '/images/plants/stem/rotala_ceylon.png'
+              },
+              {
+                name: 'Ludwigia senegalensis',
+                origin: 'West Africa (Guinea)',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/ludwigia_senegalensis.png'
+              },
+              {
+                name: 'Myriophyllum hippuroides',
+                origin: 'North America (BC to California)',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/myriophyllum_hippuroides.png'
+              },
+              {
+                name: 'Tonina fluviatilis',
+                origin: 'South & Central America, Caribbean',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/tonina_fluviatilis.png'
+              },
+              {
+                name: 'Hygrophilla odora',
+                origin: 'West Africa',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Medium',
+                image: '/images/plants/stem/hygrophilla_odora.png'
+              }
             ]
           },
           {
-            type: 'Rosette Plants',            
+            type: 'Rosette Plants',
             plants: [
               {
                 name: 'Amazon Sword',
@@ -165,7 +266,8 @@ export const services = [  {
           },
           {
             type: 'Carpet Plants',
-            plants: [              {
+            plants: [
+              {
                 name: 'Monte Carlo',
                 origin: 'Argentina',
                 light: 'Medium to High',
@@ -193,7 +295,8 @@ export const services = [  {
           },
           {
             type: 'Epiphytes',
-            plants: [              {
+            plants: [
+              {
                 name: 'Anubias Barteri',
                 origin: 'West Africa',
                 light: 'Low to Medium',
@@ -221,7 +324,8 @@ export const services = [  {
           },
           {
             type: 'Moss',
-            plants: [              {
+            plants: [
+              {
                 name: 'Java Moss',
                 origin: 'Southeast Asia',
                 light: 'Low to High',
@@ -248,7 +352,8 @@ export const services = [  {
             ]
           }
         ]
-      },      {
+      },
+      {
         category: 'Lighting',
         items: [
           { name: 'LED Aquarium Light (Full Spectrum)', image: '/images/equipment/led-aquarium-light.jpg' },
@@ -286,7 +391,9 @@ export const services = [  {
         ]
       }
     ]
-  },  {    id: 'designer-terrariums',
+  },
+  {
+    id: 'designer-terrariums',
     name: 'Designer Terrariums',
     icon: Leaf,
     category: 'terrestrial',
@@ -303,16 +410,20 @@ export const services = [  {
       'Care & maintenance guides',
       'Replacement guarantee',
       'Seasonal refresh service',
-      'Corporate installation available'    ],    gallery: [
+      'Corporate installation available'
+    ],
+    gallery: [
       '/images/services/terrarium-1.jpg',
       '/images/services/terrarium-2.jpg',
       '/images/services/terrarium-3.jpg'
-    ],requiredItems: [
+    ],
+    requiredItems: [
       {
         category: 'Plants',
         subcategories: [
           {
-            type: 'Foliage Plants',            plants: [
+            type: 'Foliage Plants',
+            plants: [
               {
                 name: 'Fittonia (Nerve Plant)',
                 origin: 'South America',
@@ -340,7 +451,8 @@ export const services = [  {
             ]
           },
           {
-            type: 'Air Plants',            plants: [
+            type: 'Air Plants',
+            plants: [
               {
                 name: 'Tillandsia Ionantha',
                 origin: 'Central America',
@@ -360,7 +472,8 @@ export const services = [  {
             ]
           },
           {
-            type: 'Succulents',            plants: [
+            type: 'Succulents',
+            plants: [
               {
                 name: 'Haworthia',
                 origin: 'South Africa',
@@ -380,7 +493,8 @@ export const services = [  {
             ]
           },
           {
-            type: 'Moss',            plants: [
+            type: 'Moss',
+            plants: [
               {
                 name: 'Sheet Moss',
                 origin: 'Temperate regions',
@@ -401,7 +515,8 @@ export const services = [  {
           },
           {
             type: 'Orchids',
-            plants: [              {
+            plants: [
+              {
                 name: 'Mini Phalaenopsis',
                 origin: 'Southeast Asia',
                 light: 'Bright Indirect',
@@ -420,7 +535,8 @@ export const services = [  {
             ]
           }
         ]
-      },      {
+      },
+      {
         category: 'Container',
         items: [
           { name: 'Glass Terrarium', image: '/images/equipment/glass-terrarium.jpg' },
@@ -456,7 +572,9 @@ export const services = [  {
         ]
       }
     ]
-  },  {    id: 'luxury-water-features',
+  },
+  {
+    id: 'luxury-water-features',
     name: 'Luxury Water Features',
     icon: Droplets,
     category: 'aquatic',
@@ -473,12 +591,15 @@ export const services = [  {
       'LED lighting integration',
       'Aquatic plant establishment',
       'Fish stocking consultation',
-      'Comprehensive warranty & support'    ],    gallery: [
+      'Comprehensive warranty & support'
+    ],
+    gallery: [
       '/images/services/water-feature-1.jpg',
       '/images/services/water-feature-2.jpg',
       '/images/services/water-feature-3.jpg'
     ],
-    requiredItems: [      {
+    requiredItems: [
+      {
         category: 'Pumps & Filtration',
         items: [
           { name: 'Submersible Pump', image: '/images/equipment/submersible-pump.jpg' },
@@ -527,7 +648,8 @@ export const services = [  {
         ]
       }
     ]
-  },  {
+  },
+  {
     id: 'landscape-architecture',
     name: 'Landscape Architecture',
     icon: TreePine,
@@ -545,12 +667,15 @@ export const services = [  {
       'Hardscape integration',
       'Soil analysis & preparation',
       'Seasonal planting schedules',
-      'Ongoing horticultural support'    ],    gallery: [
+      'Ongoing horticultural support'
+    ],
+    gallery: [
       '/images/services/landscape-1.jpg',
       '/images/services/landscape-2.jpg',
       '/images/services/landscape-3.jpg'
     ],
-    requiredItems: [      {
+    requiredItems: [
+      {
         category: 'Plants',
         items: [
           { name: 'Native Trees', image: '/images/equipment/native-trees.jpg' },
@@ -601,7 +726,8 @@ export const services = [  {
         ]
       }
     ]
-  },  {
+  },
+  {
     id: 'paludarium-systems',
     name: 'Paludarium Systems',
     icon: CloudRain,
@@ -619,16 +745,20 @@ export const services = [  {
       'Plant & animal habitat creation',
       'Water feature engineering',
       'Automated monitoring systems',
-      'Expert ecosystem management'    ],
-    gallery: [      '/images/services/paludarium-1.jpg',
+      'Expert ecosystem management'
+    ],
+    gallery: [
+      '/images/services/paludarium-1.jpg',
       '/images/services/paludarium-2.jpg',
       '/images/services/paludarium-3.jpg'
-    ],requiredItems: [
+    ],
+    requiredItems: [
       {
         category: 'Aquatic Plants',
         subcategories: [
           {
-            type: 'Epiphytes (Aquatic)',            plants: [
+            type: 'Epiphytes (Aquatic)',
+            plants: [
               {
                 name: 'Anubias Barteri',
                 origin: 'West Africa',
@@ -656,7 +786,8 @@ export const services = [  {
             ]
           },
           {
-            type: 'Moss (Aquatic)',            plants: [
+            type: 'Moss (Aquatic)',
+            plants: [
               {
                 name: 'Java Moss',
                 origin: 'Southeast Asia',
@@ -676,7 +807,8 @@ export const services = [  {
             ]
           },
           {
-            type: 'Rosette (Aquatic)',            plants: [
+            type: 'Rosette (Aquatic)',
+            plants: [
               {
                 name: 'Cryptocoryne Wendtii',
                 origin: 'Sri Lanka',
@@ -693,7 +825,8 @@ export const services = [  {
         category: 'Terrestrial Plants',
         subcategories: [
           {
-            type: 'Ferns',            plants: [
+            type: 'Ferns',
+            plants: [
               {
                 name: 'Maidenhair Fern',
                 origin: 'Worldwide',
@@ -713,7 +846,8 @@ export const services = [  {
             ]
           },
           {
-            type: 'Bromeliads',            plants: [
+            type: 'Bromeliads',
+            plants: [
               {
                 name: 'Neoregelia',
                 origin: 'South America',
@@ -752,7 +886,8 @@ export const services = [  {
             ]
           }
         ]
-      },      {
+      },
+      {
         category: 'Climate Control',
         items: [
           { name: 'Misting System', image: '/images/equipment/misting-system.jpg' },
@@ -780,7 +915,8 @@ export const services = [  {
         ]
       }
     ]
-  },  {
+  },
+  {
     id: 'custom-aviaries',
     name: 'Custom Aviaries',
     icon: Bird,
@@ -798,7 +934,9 @@ export const services = [  {
       'Feeding & watering systems',
       'Easy maintenance access',
       'Weather protection systems',
-      'Veterinary consultation included'    ],    gallery: [
+      'Veterinary consultation included'
+    ],
+    gallery: [
       '/images/services/aviary-1.jpg',
       '/images/services/aviary-2.jpg',
       '/images/services/aviary-3.jpg'
@@ -811,7 +949,8 @@ export const services = [  {
       {
         category: 'Safety Features',
         items: ['Double Entry System', 'Escape Prevention Mesh', 'Predator-proof Design', 'Emergency Access Gates']
-      },      {
+      },
+      {
         category: 'Bird Comfort',
         items: [
           { name: 'Natural Perches', image: '/images/equipment/natural-perches.jpg' },
@@ -841,7 +980,8 @@ export const services = [  {
         ]
       }
     ]
-  },  {
+  },
+  {
     id: 'marine-reef-systems',
     name: 'Marine Reef Systems',
     icon: Waves,
@@ -859,12 +999,15 @@ export const services = [  {
       'Specialized marine lighting',
       'Water chemistry management',
       'Marine livestock consultation',
-      'Emergency support services'    ],
-    gallery: [      '/images/services/reef-1.jpg',
+      'Emergency support services'
+    ],
+    gallery: [
+      '/images/services/reef-1.jpg',
       '/images/services/reef-2.jpg',
       '/images/services/reef-3.jpg'
     ],
-    requiredItems: [      {
+    requiredItems: [
+      {
         category: 'Live Coral',
         items: [
           { name: 'Hard Corals', image: '/images/equipment/hard-corals.jpg' },
