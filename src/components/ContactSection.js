@@ -45,11 +45,11 @@ const ContactSection = () => {
                 </p>
                 <p className="flex items-center text-gray-600">
                   <FiPhone className="mr-3 text-emerald-600" />
-                  <a href="tel:+1234567890" className="hover:text-emerald-600 transition-colors duration-300">+91 123456789</a>
+                  <a href="tel:+9916294824" className="hover:text-emerald-600 transition-colors duration-300">+91 9916294824</a>
                 </p>
                 <p className="flex items-center text-gray-600">
                   <FiMapPin className="mr-3 text-emerald-600" />
-                  123 Nature Street
+                  Banashankari 3rd Stage, Bengaluru, Karnataka, India
                 </p>
               </div>
             </div>

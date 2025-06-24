@@ -93,8 +93,8 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-            <p className="mb-2">123 Nature Street, Green City, 12345</p>
-            <p className="mb-2">Phone: (123) 456-7890</p>
+            <p className="mb-2">Banashankari 3rd Stage, Bengaluru, Karnataka, India</p>
+            <p className="mb-2">Phone: +91 9916294824</p>
             <p className="flex items-center text-white">
               <FiMail className="mr-3 text-emerald-600" />
               <a href="mailto:saiscaper.harshith@gmail.com" className="hover:text-emerald-600 transition-colors duration-300">saiscaper.harshith@gmail.com</a>
