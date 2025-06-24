@@ -239,28 +239,124 @@ export const services = [
             type: 'Rosette Plants',
             plants: [
               {
-                name: 'Amazon Sword',
+                name: 'Lilaeopsis brasiliensis',
                 origin: 'South America',
-                light: 'Low to Medium',
-                co2: 'Optional',
+                light: 'Medium',
+                co2: 'Medium',
                 difficulty: 'Easy',
-                image: '/images/plants/amazon-sword.jpg'
+                image: '/images/plants/rosette/lilaeopsis_brasiliensis.png'
               },
               {
-                name: 'Vallisneria',
-                origin: 'Tropical regions',
-                light: 'Low to Medium',
-                co2: 'Not required',
-                difficulty: 'Very Easy',
-                image: '/images/plants/vallisneria.jpg'
+                name: 'Staurogyne repens',
+                origin: 'Brazil (Rio Cristalino, Amazonas)',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Medium',
+                image: '/images/plants/rosette/staurogyne_repens.png'
               },
               {
-                name: 'Cryptocoryne Wendtii',
+                name: 'Cyperus Helferi',
+                origin: 'Thailand',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Medium',
+                image: '/images/plants/rosette/cyperus_helferi.png'
+              },
+              {
+                name: 'Hygrophila sp. Araguaia',
+                origin: 'South and East Asia',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Difficult',
+                image: '/images/plants/rosette/hygrophila_araguaia.png'
+              },
+              {
+                name: 'Pogostemon Helferi',
+                origin: 'Thailand-Burma border',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Medium',
+                image: '/images/plants/rosette/pogostemon_helferi.png'
+              },
+              {
+                name: 'Echinodorus tenellus',
+                origin: 'Americas (US to South America)',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Medium',
+                image: '/images/plants/rosette/echinodorus_tenellus.png'
+              },
+              {
+                name: 'Cryptocoryne axelrodi',
                 origin: 'Sri Lanka',
-                light: 'Low to Medium',
-                co2: 'Optional',
+                light: 'Low',
+                co2: 'Low',
                 difficulty: 'Easy',
-                image: '/images/plants/cryptocoryne-wendtii.jpg'
+                image: '/images/plants/rosette/cryptocoryne_axelrodi.png'
+              },
+              {
+                name: 'Cryptocoryne lucens',
+                origin: 'Sri Lanka, Southeast Asia',
+                light: 'Low',
+                co2: 'Low',
+                difficulty: 'Easy',
+                image: '/images/plants/rosette/cryptocoryne_lucens.png'
+              },
+              {
+                name: 'Cryptocoryne wendtii green',
+                origin: 'Sri Lanka',
+                light: 'Low',
+                co2: 'Low',
+                difficulty: 'Easy',
+                image: '/images/plants/rosette/cryptocoryne_wendtii_green.png'
+              },
+              {
+                name: 'Cryptocoryne wendtii brown',
+                origin: 'Sri Lanka',
+                light: 'Low',
+                co2: 'Low',
+                difficulty: 'Easy',
+                image: '/images/plants/rosette/cryptocoryne_wendtii_brown.png'
+              },
+              {
+                name: 'Cryptocoryne wendtii tropica',
+                origin: 'Sri Lanka',
+                light: 'Low',
+                co2: 'Low',
+                difficulty: 'Easy',
+                image: '/images/plants/rosette/cryptocoryne_wendtii_tropica.png'
+              },
+              {
+                name: 'Cryptocoryne pink panther',
+                origin: 'Sri Lanka',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
+                image: '/images/plants/rosette/cryptocoryne_pink_panther.png'
+              },
+              {
+                name: 'Lagenandra keralensis',
+                origin: 'India (Kerala)',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
+                image: '/images/plants/rosette/lagenandra_keralensis.png'
+              },
+              {
+                name: 'Lagenandra meeboldii green',
+                origin: 'India (Western Ghats)',
+                light: 'Medium',
+                co2: 'Medium',
+                difficulty: 'Easy',
+                image: '/images/plants/rosette/lagenandra_meeboldii_green.png'
+              },
+              {
+                name: 'Lagenandra meeboldii red',
+                origin: 'India (Western Ghats)',
+                light: 'High',
+                co2: 'High',
+                difficulty: 'Medium',
+                image: '/images/plants/rosette/lagenandra_meeboldii_red.png'
               }
             ]
           },
